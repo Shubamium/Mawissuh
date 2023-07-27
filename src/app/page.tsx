@@ -3,9 +3,9 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main>
+    <div className="page">
 		<h2>Hello</h2>
-		<p>This is my site</p>
-    </main>
+		<p>Welcome to my site!!!</p>
+	</div>
   )
 }

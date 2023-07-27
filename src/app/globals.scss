@@ -106,3 +106,17 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+
+$sidebarSize:30vw;
+#layout{
+	// background-color: rebeccapurple;
+	// display: grid;
+	// margin-left: 25vw;
+	// grid-template-columns: 25vw 1fr;
+}
+
+main{
+	min-height: 250vh;
+	margin-left: $sidebarSize;
+}
