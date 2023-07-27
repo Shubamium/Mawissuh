@@ -87,9 +87,21 @@ body {
 }
 
 body {
-	background-color: $bgColor;
+	// background-color: $bgColor;
+	background:url('/static/images/pattern/bg_pattern_star.png'), #fffaf6;
+	background-repeat: repeat;
+	background-blend-mode: multiply;
+	background-size: 2%;
+	animation: bg-move 525s linear infinite;
 }
 
+@keyframes bg-move {
+	from{
+		background-position: 0%;
+	}to{
+		background-position: 500%;
+	}
+}
 a {
   color: inherit;
   text-decoration: none;
