@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import './sidebar.scss'
 import Link from 'next/link'
+import Navigation from './navigation/Navigation'
 
 const Sidebar = () => {
 	return (
@@ -10,13 +11,7 @@ const Sidebar = () => {
 					<p>Hide Sidebar</p>
 					<p>Warning</p>
 				</div>
-				<nav className='navigation'>
-					<Image src={"/static/images/art/icons/badge/badge_gradient.svg"} alt='' width={150} height={150} className='decor_badge'/>
-					<Link className="nav-ling" href={"/"}>Home</Link>
-					<Link className="nav-ling" href={"/services/pricing"}>Services</Link>
-					<Link className="nav-ling" href={"/services/terms"}>Terms</Link>
-					<Link className="nav-ling" href={"/services/talents"}>Talents</Link>
-				</nav>
+				<Navigation/>
 				<div className="sidebar-bottom">
 					<p>Contacts</p>
 				</div>

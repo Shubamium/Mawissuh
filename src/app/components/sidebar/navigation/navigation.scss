@@ -1,0 +1,31 @@
+.navigation{
+	// padding-left: 2vw;
+	.decor_badge{
+		margin-top: 3vw;
+		width: 7vw;
+		height: 7vw;
+		margin-left: 1vw;
+	}
+	.navigation-links{
+		display: flex;
+		flex-direction: column;
+		padding-left: 2vw;
+		font-size: 1.3vw;
+		list-style-type: none;
+		gap: 1vw;
+		.link{
+			color:#615453;
+			transition: all 250ms ease;
+			&.active, &:hover{
+				font-weight: 500;
+				cursor: pointer;
+				background-color:#584C4B;
+				padding: .4vw 1.2vw;
+				border-radius: .8vw;
+				border-bottom: .2vw solid white;
+				color: white;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}
