@@ -2,7 +2,7 @@
 import { SidebarCollapseContext } from '@/app/context/SidebarContext'
 import React , { useContext }from 'react'
 import Button from '../../general/button/button'
-
+import { BsArrowLeft } from 'react-icons/bs'
 const ButtonSidebarHide = () => {
 	const sidebarContext = useContext(SidebarCollapseContext)
 	return (
@@ -11,7 +11,7 @@ const ButtonSidebarHide = () => {
 		 	onClick={()=>{
 				sidebarContext.setState(state => false)
 			}}>
-				Hide Sidebar
+				<BsArrowLeft/> Hide Sidebar
 		</Button>
 	)
 }

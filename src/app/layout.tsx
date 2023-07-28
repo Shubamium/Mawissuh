@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-		<body className={fredoka.className}>
+		<body className={fredoka.className} >
 				<SidebarContextProvider>
 					<MainLayout>
 							<Sidebar/>

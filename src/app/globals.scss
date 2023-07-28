@@ -86,6 +86,7 @@ body {
   overflow-x: hidden;
 }
 
+
 body {
 	// background-color: $bgColor;
 	background:url('/static/images/pattern/bg_pattern_star.png'), #fffaf6;
@@ -110,11 +111,11 @@ a {
 
 $sidebarSize:30vw;
 #root-container{
-	transition: all 450ms ease;
-
+	transition: margin-left 450ms ease;
 }
 #root-container.hidden{
 	margin-left: -27vw;
+
 }
 
 main{

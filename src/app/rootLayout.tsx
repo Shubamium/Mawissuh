@@ -7,7 +7,6 @@ type rootLayoutProps = {
 }
 const MainLayout = ({children} : rootLayoutProps) => {
 	const sidebar = useContext(SidebarCollapseContext);
-	
 	return (
 		<div id="root-container" className={sidebar.state ? 'visible' : 'hidden' }>
 			{children}
