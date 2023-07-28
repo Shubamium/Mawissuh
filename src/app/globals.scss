@@ -109,11 +109,12 @@ a {
 
 
 $sidebarSize:30vw;
-#layout{
-	// background-color: rebeccapurple;
-	// display: grid;
-	// margin-left: 25vw;
-	// grid-template-columns: 25vw 1fr;
+#root-container{
+	transition: all 450ms ease;
+
+}
+#root-container.hidden{
+	margin-left: -27vw;
 }
 
 main{

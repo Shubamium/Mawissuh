@@ -1,0 +1,15 @@
+.btn{
+	background-color: white;
+	border: none;
+	border-radius: 1em;
+	transition: all 250ms ease;
+	
+	&:hover{
+		scale: 1.05;
+		cursor: pointer;
+	}
+
+	&:active{
+		scale: .95;
+	}
+}
