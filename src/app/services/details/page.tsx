@@ -1,10 +1,14 @@
-
-type Props = {}
+import ServiceList from "./list/ServiceList"
 
 const DetailsPage = () => {
   return (
-	<div>
-		<h2>DetailsPage</h2>
+	<div id="container_detail-page">
+		<ServiceList />
+		<ServiceList  layout="right"/>
+		<ServiceList />
+		<ServiceList  layout="right"/>
+		<ServiceList />
+		<ServiceList  layout="right"/>
 	</div>
   )
 }

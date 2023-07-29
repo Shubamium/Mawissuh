@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import HeaderTitle from '../components/general/HeaderTitleComponent/HeaderTitle';
-import ServiceNavigation from './pricing/serviceNavigation/ServiceNavigation';
+import ServiceNavigation from './serviceNavigation/ServiceNavigation';
 
 type Props = {
 	children:ReactNode;
