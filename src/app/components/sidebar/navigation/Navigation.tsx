@@ -11,16 +11,17 @@ import { RiMagicFill } from 'react-icons/ri'
 const Navigation = () => {
 
 	const currentPath = usePathname();
-	const linkClass = (path:string) => 'link ' + (currentPath === path ? 'active' : '');
+	const homeClass = (path:string) => 'link ' + (currentPath === path ? 'active' : '');
+	const linkClass = (path:string) => 'link ' + (currentPath.startsWith(path) ? 'active' : '');
 	console.log(currentPath);
 	return (
 		<nav className='navigation'>
 			<Image src={"/static/images/art/icons/badge/badge_gradient.svg"} alt='' width={150} height={150} className='decor_badge'/>
 			<ul className='navigation-links'>
-				<li className={linkClass('/')}>
+				<li className={homeClass('/')}>
 					<Link className="nav-link" href={"/"}> <FaHome/> Home </Link>
 				</li> 
-				<li className={linkClass('/pricing')}>
+				<li className={linkClass('/services')}>
 					<Link className="nav-link" href={"/services/pricing"}> <FaBriefcase /> Services</Link>
 				</li>
 				<li className={linkClass('/terms')}>

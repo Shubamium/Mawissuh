@@ -1,0 +1,16 @@
+
+#container_service-navigation{
+	width: fit-content;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #DCE2B9;
+	color: #A2A089;
+	
+	display: flex;
+	justify-content: space-between;
+
+	.service-navigation-link{
+		padding: .6em 2em;
+		
+	}
+}
