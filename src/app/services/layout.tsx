@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import HeaderTitle from '../components/general/headerTitle/HeaderTitle';
+import HeaderTitle from '../components/general/HeaderTitleComponent/HeaderTitle';
 import ServiceNavigation from './pricing/serviceNavigation/ServiceNavigation';
 
 type Props = {

@@ -1,5 +1,4 @@
 import './headerTitle.scss'
-
 type headerTitleProps = {
 	title: string;
 	children: React.ReactNode;
