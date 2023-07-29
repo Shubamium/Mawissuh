@@ -24,10 +24,10 @@ const Navigation = () => {
 					<Link className="nav-link" href={"/services/pricing"}> <FaBriefcase /> Services</Link>
 				</li>
 				<li className={linkClass('/terms')}>
-					<Link className="nav-link" href={"/services/terms"}><LiaScrollSolid/> Terms</Link>
+					<Link className="nav-link" href={"/terms"}><LiaScrollSolid/> Terms</Link>
 				</li>
 				<li className={linkClass('/talents')}>
-					<Link className="nav-link" href={"/services/talents"}><RiMagicFill/> Talents</Link>
+					<Link className="nav-link" href={"/talents"}><RiMagicFill/>Talents</Link>
 				</li>
 			</ul>
 		</nav>

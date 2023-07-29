@@ -5,6 +5,8 @@ import ButtonSidebarHide from './buttons/ButtonSidebarHide'
 import ButtonSidebarShow from './buttons/ButtonSidebarShow'
 import Button from '../general/button/button'
 import { PiWarning } from 'react-icons/pi'
+import { IoIosMail } from 'react-icons/io' 
+import { BsTwitter, BsDiscord } from 'react-icons/bs' 
 const Sidebar = () => {
 	return (
 		<header className="sidebar">
@@ -15,7 +17,13 @@ const Sidebar = () => {
 				</div>
 				<Navigation/>
 				<div className="sidebar-bottom">
-					<p>Contacts</p>
+					<h2>Contacts✧</h2>
+					<div className='sidebar-contacts'>
+						<a href="mailto:SheepishMage@gmail.com" target='_blank'><IoIosMail/></a>
+						<a href="#" target='_blank'><BsTwitter/></a>
+						<a href="#" target='_blank'><BsDiscord/></a>
+					</div>
+					<p className='credits'>website design by <a href="https://twitter.com/Shubamium2">@shubamium</a></p>
 				</div>
 			</div>
 		 	<div className="image-part">
