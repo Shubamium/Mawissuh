@@ -1,4 +1,5 @@
 import ServiceList from "./list/ServiceList"
+import ServicesNote from "./note/ServicesNote"
 
 const DetailsPage = () => {
   return (
@@ -9,6 +10,8 @@ const DetailsPage = () => {
 		<ServiceList  layout="right"/>
 		<ServiceList />
 		<ServiceList  layout="right"/>
+
+		<ServicesNote/>
 	</div>
   )
 }
