@@ -1,0 +1,32 @@
+#container_experimental{
+	
+	padding-top: 2em;
+	.experimental-title-panel{
+		background-color: #484848;
+		margin: 0 auto;
+		max-width: min(70%,720px);
+		color: white;
+		border-radius: 1em;
+		.header{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1em;
+			padding: .2em 1em;
+			hr{
+				height: 1px;
+				border: 1px solid rgba(255, 255, 255, 0.692);
+				border-radius: 1em;
+				width: 100%;
+			}
+			img{
+				object-fit: contain;
+			}
+		}
+		.text-part{
+			background-color: #3C3C3C;
+			padding: 1em;
+			min-height: 100px;
+		}
+	}
+}
