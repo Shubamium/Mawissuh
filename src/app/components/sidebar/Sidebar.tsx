@@ -23,7 +23,7 @@ const Sidebar = () => {
 						<a href="#" target='_blank'><BsTwitter/></a>
 						<a href="#" target='_blank'><BsDiscord/></a>
 					</div>
-					<p className='credits'>website design by <a href="https://twitter.com/Shubamium2">@shubamium</a></p>
+					<p className='credits'>website design by <a href="https://twitter.com/Shubamium2" target='_blank'>@shubamium</a></p>
 				</div>
 			</div>
 		 	<div className="image-part">
