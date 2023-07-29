@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import './homeTitle.scss'
+
 const HomeTitle = () => {
   return (
 	<div id="container_home-title">
