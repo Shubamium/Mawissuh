@@ -1,10 +1,11 @@
 import React, { ReactNode } from 'react'
-import HeaderTitle from '../components/general/headerTitle/headerTitle'
+import HeaderTitle from '../components/general/headerTitle/HeaderTitle';
 import ServiceNavigation from './pricing/serviceNavigation/ServiceNavigation';
 
 type Props = {
 	children:ReactNode;
 }
+
 
 const ServicePageLayout = ({children}: Props) => {
   return (

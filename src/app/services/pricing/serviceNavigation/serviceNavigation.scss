@@ -1,0 +1,27 @@
+
+#container_service-navigation{
+	width: fit-content;
+	margin: 1em auto;
+	text-align: center;
+	background-color: #DCE2B9;
+	color: #A2A089;
+	
+	display: flex;
+	justify-content: space-between;
+	border-radius: 2em;
+	border-bottom: 3px solid #b3bb84;
+	.service-navigation-link{
+		padding: .6em 2em;
+		border-radius: 2em;
+		transition: all 250ms ease;
+		min-width: 200px;
+		&.active{
+			background-color: #5D9ABA;
+			color: white;
+		}
+
+		&:not(.active):hover{
+			scale: 1.2 1;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-import HeaderTitle from "../components/general/headerTitle/headerTitle"
+import HeaderTitle from "../components/general/headerTitle/HeaderTitle"
 
 type Props = {}
 

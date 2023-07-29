@@ -1,11 +1,12 @@
 'use client'
+
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import './serviceNagivation.scss'
+import './serviceNavigation.scss'
 const ServiceNavigation = () => {
 
 	const pathName = usePathname(); 
-	const linkClass = (path:string) => path === pathName ? 'active' : ''; 
+	const linkClass = (path:string) => ('/services' + path) === pathName ? 'active' : ''; 
 
 	return (
 		<div id="container_service-navigation">

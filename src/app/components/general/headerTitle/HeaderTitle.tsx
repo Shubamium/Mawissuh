@@ -1,4 +1,4 @@
-import './HeaderTitle.scss'
+import './headerTitle.scss'
 
 type headerTitleProps = {
 	title: string;
