@@ -11,7 +11,7 @@ const ButtonSidebarShow = () => {
 		 	onClick={()=>{
 				sidebarContext.setState(state => !state)
 			}}>
-				<BsArrowRight/>
+				<BsArrowRight />
 		</Button>
 	)
 }

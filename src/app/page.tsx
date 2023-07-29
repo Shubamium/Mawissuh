@@ -1,4 +1,4 @@
-import HomeTitle from "./components/home/HomeTitle"
+import HomeTitle from "./components/home/HomeTitle.tsx"
 
 export default function Home() {
   return (
