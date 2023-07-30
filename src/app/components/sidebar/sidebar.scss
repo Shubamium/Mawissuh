@@ -6,6 +6,8 @@
 	max-width: 30vw;
 	gap: 2vw;
 	
+
+	
 	.actions{
 		display: flex;
 		flex-direction: column;
@@ -76,13 +78,15 @@
 				background-position: 100%;
 				background-size: contain;
 				z-index: -100;
-				
+				transition: all 250ms ease;
 				position: absolute;
 				animation: glow 3s ease infinite, speen 120s linear infinite reverse, cast 1s ;
 				transform: translateX(-50%);
 
 			}
-
+			&:hover::after{
+				scale: 2;
+			}
 		
 		}
 

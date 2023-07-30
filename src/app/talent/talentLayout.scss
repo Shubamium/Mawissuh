@@ -1,0 +1,13 @@
+.btn-talent-back{
+	background-color: #584C4B;
+	color: white;
+	padding: .2em;
+	border-radius: 0;
+	padding: .5em;
+	margin: 2em .5em;
+	margin-left: 0;
+	&:hover{
+		padding: .5em 4em;
+		scale: 1;
+	}
+}

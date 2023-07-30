@@ -6,19 +6,27 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 	.header-title{
 		font-size: 3.5rem;
 		padding-top: 70px;
-		background: linear-gradient(60deg,#4B97B7,#d1d8ad);
+		background: linear-gradient(60deg,#54B5DA, #6AC8FA, #bddac2, #dfd489, #ffe896a1);
 		color: transparent;
 		background-clip: text;
-		$shadowColor:#c6efff;
-		$shadowWidth:3px;
+		$shadowColor:#50869b;
+		$shadowWidth:2px;
 		filter: drop-shadow(-$shadowWidth $shadowWidth $shadowColor);
-
-		// -webkit-text-stroke: 2px white;
-		// paint-order: stroke fill;
-
+	}
+	.header-title.hidden{
+		position: absolute;
+		z-index: -20;
+		filter: initial;
+		text-shadow:
+				2px 2px 0 white,
+			-2px -2px 0 white,  
+			2px -2px 0 white,
+			-2px 2px 0 white,
+				2px 2px 0 white;
 	}
 	.header-description{
 		font-size: 1rem;
