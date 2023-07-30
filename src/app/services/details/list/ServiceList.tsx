@@ -14,7 +14,7 @@ const ServiceList = ({layout,title,description} : serviceListProp) => {
 			<div className="text-part">
 				<h2 className='title'>Talent Creation</h2>
 				<p className="description">
-					Whether you're a freshly debuting VTuber or on your third version of your original character, I'm here to help you with persona development, branding, and channel consistency!
+					Whether you&apos;re a freshly debuting VTuber or on your third version of your original character, I&apos;m here to help you with persona development, branding, and channel consistency!
 				</p>				
 				<div className="notes">
 					<div className="service-note">
