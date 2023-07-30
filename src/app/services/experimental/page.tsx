@@ -1,6 +1,6 @@
 import Image from "next/image"
 import './experimental.scss'
-import ExperimentalCustomPanel from "./panel/experimentalCustomPanel"
+import ExperimentalCustomPanel from "./panel/ExperimentalCustomPanel"
 const Experimental = () => {
   return (
 	<div id="container_experimental">
