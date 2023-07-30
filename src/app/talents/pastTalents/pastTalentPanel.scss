@@ -1,0 +1,74 @@
+.past-talent-panel{
+	background-color:#F4E8E1;
+	// max-width: 200px;
+	width: 500px;
+	$panelBr:1em;
+	border-radius: $panelBr;
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	// gap: 2em;
+	// min-height: 400px;
+	.past-talent-panel-body{
+		// padding: 4em .9em;
+		// padding-top: 1em;
+		display: flex;
+		align-items: center;
+		.talent-pfp{
+			padding: 1.2em 1.8em;
+			img{
+				display: block;
+				width: 100px;
+				height: 100px;
+				object-fit: cover;
+				object-position: center;
+				border-radius: 50%;
+			}
+		}
+		.talent-info{
+			padding-right: 1em;
+			.name{
+				color:#B89F9B;
+				white-space: nowrap;
+				font-weight: 500;
+				font-size: 1.2rem;
+			}
+			.intro{
+				color: #C3BAB5;
+				font-size: 1rem;
+			}
+		}
+	}
+	.past-talent-panel-footer{
+		border-radius:0 0 $panelBr $panelBr;
+		overflow: hidden;
+		text-align: right;
+		vertical-align: center;
+		a{
+			background-color: #C7B9B4;
+			color: white;
+			padding: .4em .6em;
+			// padding-bottom: .8em;
+			font-size: .6rem;
+			width: 100%;
+			display: block;
+			font-weight: 600;
+			span{
+				transform: translateX(-.7em);
+				display: block;
+				transition: 250ms ease;
+				svg{
+					position: relative;
+					top: 2px;
+				}
+			}
+			&:hover{
+				span{
+					transform: translateX(0em);
+				}
+			}
+		}
+		
+	}
+}

@@ -1,5 +1,6 @@
 import HeaderTitle from "../components/general/HeaderTitleComponent/HeaderTitle"
 import ActiveTalentPanel from "./activetalents/ActiveTalentPanel"
+import PastTalentPanel from "./pastTalents/PastTalentPanel"
 import './talentsPage.scss'
 const TalentsPage = () => {
   return (
@@ -16,6 +17,22 @@ const TalentsPage = () => {
 				<ActiveTalentPanel/>
 				<ActiveTalentPanel/>
 				<ActiveTalentPanel/>
+			</div>
+		</div>
+
+		<div id="container_past-talents">
+			<HeaderTitle 
+				title="Past Talents"
+			>
+				I respect the privacy and confidentiality of my talents. There is no sharing of sensitive information or violation of any non-disclosure agreements. Any information provided is approved by the talent for public view.  This section provides general information and positive experiences I've had working with them!
+			</HeaderTitle>
+			<div className="past-talent-lists">
+				<PastTalentPanel/>
+				<PastTalentPanel/>
+				<PastTalentPanel/>
+				<PastTalentPanel/>
+				<PastTalentPanel/>
+				<PastTalentPanel/>
 			</div>
 		</div>
 

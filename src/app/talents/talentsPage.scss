@@ -9,3 +9,14 @@
 		padding: 2em;
 	}
 }
+
+#container_past-talents{
+	margin-top: 1em;
+	.past-talent-lists{
+		padding: 2em;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5em;
+		justify-content: center;
+	}
+}
