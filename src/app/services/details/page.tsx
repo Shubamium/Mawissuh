@@ -4,11 +4,11 @@ import ServicesNote from "./note/ServicesNote"
 const DetailsPage = () => {
   return (
 	<div id="container_detail-page">
-		<ServiceList />
+		<ServiceList layout="left"  />
 		<ServiceList  layout="right"/>
-		<ServiceList />
+		<ServiceList layout="left"  />
 		<ServiceList  layout="right"/>
-		<ServiceList />
+		<ServiceList layout="left"  />
 		<ServiceList  layout="right"/>
 
 		<ServicesNote/>

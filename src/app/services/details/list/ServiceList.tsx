@@ -3,9 +3,9 @@ import Image from 'next/image';
 import './serviceList.scss'
 
 type serviceListProp = {
-	layout: 'left' | 'right';
-	title:string;
-	description:string;
+	layout?: 'left' | 'right';
+	title?:string;
+	description?:string;
 }
 const ServiceList = ({layout,title,description} : serviceListProp) => {
   return (
