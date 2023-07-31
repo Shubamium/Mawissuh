@@ -4,8 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import './navigation.scss'
 import { usePathname} from 'next/navigation'
-import { FaBriefcase, FaHome} from 'react-icons/fa'
-import { LiaScrollSolid} from 'react-icons/lia'
+import { FaBriefcase, FaHome, FaScroll} from 'react-icons/fa'
 import { RiMagicFill } from 'react-icons/ri'
 
 const Navigation = () => {
@@ -25,7 +24,7 @@ const Navigation = () => {
 					<Link className="nav-link" href={"/services/pricing"} > <FaBriefcase /> Services</Link>
 				</li>
 				<li className={linkClass('/terms')}>
-					<Link className="nav-link" href={"/terms"} ><LiaScrollSolid/> Terms</Link>
+					<Link className="nav-link" href={"/terms"} ><FaScroll/> Terms</Link>
 				</li>
 				<li className={linkClass('/talents')}>
 					<Link className="nav-link" href={"/talents"} ><RiMagicFill/>Talents</Link>

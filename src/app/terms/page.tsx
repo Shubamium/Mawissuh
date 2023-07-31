@@ -1,4 +1,5 @@
 import HeaderTitle from "../components/general/HeaderTitleComponent/HeaderTitle"
+import ServiceGuideline from "./guideline/serviceGuideline"
 import TermsTitle from "./title/TermsTitle"
 
 type Props = {}
@@ -10,6 +11,7 @@ const Terms = (props: Props) => {
 				Please read these Terms and Conditions carefully before engaging with my management services! 
 		</HeaderTitle>
 		<TermsTitle/>
+		<ServiceGuideline/>
 	</div>
   )
 }
