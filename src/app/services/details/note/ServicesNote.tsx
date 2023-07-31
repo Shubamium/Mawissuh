@@ -10,7 +10,7 @@ const ServicesNote = () => {
 		</div>
 		<div className="image-part">
 			<div className="bg"></div>
-			<Image src="/static/images/art/chibis/techSupportTransparent.png" width="300" height="300" alt="chibi"/>
+			<Image src="/static/images/art/chibis/techsupportTransparent.png" width="300" height="300" alt="chibi"/>
 		</div>
 	</div>
   )
