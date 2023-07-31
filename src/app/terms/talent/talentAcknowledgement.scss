@@ -1,0 +1,19 @@
+.container_talent-acknowledgement{
+	.title{
+		text-align: center;
+		color: #8D8382;
+		font-size: 2rem;
+		svg{
+			display: inline-block;
+			position: relative;
+			top: 8px;
+			font-size: 2.4rem;
+		}
+	}
+	.card-container{
+		margin: 1em auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}

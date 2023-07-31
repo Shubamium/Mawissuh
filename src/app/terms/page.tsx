@@ -1,5 +1,6 @@
 import HeaderTitle from "../components/general/HeaderTitleComponent/HeaderTitle"
-import ServiceGuideline from "./guideline/serviceGuideline"
+import ServiceGuideline from "./service/serviceGuideline"
+import TalentAcknowledgement from "./talent/TalentAcknowledgement"
 import TermsTitle from "./title/TermsTitle"
 
 type Props = {}
@@ -12,6 +13,7 @@ const Terms = (props: Props) => {
 		</HeaderTitle>
 		<TermsTitle/>
 		<ServiceGuideline/>
+		<TalentAcknowledgement/>
 	</div>
   )
 }
