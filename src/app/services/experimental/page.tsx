@@ -18,9 +18,9 @@ const Experimental = () => {
 		</div>
 
 		<div className="experimental-panels">
-			<ExperimentalCustomPanel title="Artist Management" text="II willI willI willI willI willI willI will will"/> 
-			<ExperimentalCustomPanel title="Title Here" text="II willI willI willI willI willI willI will will"/> 
-			<ExperimentalCustomPanel title="Artist Management" text="II willI willI willI willI willI willI will will"/> 
+			<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
+			<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
+			<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
 		</div>
 	</div>
   )

@@ -3,9 +3,16 @@
 	border: 2px solid #584C4B;
 	color: #584C4B;
 
-	min-height: 150px;
-	padding: 1em;
+	min-height: 170px;
+	padding: 1.5em;
 	border-radius: 1em;
 	margin: 1em auto;
 	max-width: min(50%,700px);
+	h2{
+		font-size: 1.4rem;
+	}
+	p{
+		font-size: .9rem;
+		margin-block: .3em;
+	}
 }
