@@ -1,4 +1,4 @@
-import { FaCoins } from "react-icons/fa"
+import { FaCoins, FaMoneyBill } from "react-icons/fa"
 
 type Props = {}
 import './paymentGuideline.scss'
@@ -36,7 +36,7 @@ const PaymentGuideline = (props: Props) => {
 					</div>
 					<div className="guideline">
 						<div className="icon">
-							<BiBlock/>
+							<FaMoneyBill/>
 						</div>
 						<div className="guideline-text">
 							<p>I only accept payment full upfront based on what is the current rate.</p>

@@ -13,7 +13,7 @@ const TalentAcknowledgement = (props: Props) => {
 				<p>I will provide specialized services that cater specifically to your needs. You may request specific services be focused, but do note that at this time: 2 August 2023, There is NO price changes! </p>
 				<p>There are plans for that in the future so keep an eye out for it!</p>
 			</TalentCard>
-			<TalentCard title="Compliances" image="/static/images/art/chibis/techSupportTransparent.png">
+			<TalentCard title="Compliances" image="/static/images/art/chibis/techsupportTransparent.png">
 				<p>If you decide not to comply, you acknowledge you will be permanently blacklisted within my network of creators. </p>
 				<p>Should this be required to go public, I will readily present evidence with your identity uncensored to alert all creators. </p>
 				<p>Consequently, any future collaborations between anyone I am involved now or in the future with will be permanently revoked.</p>

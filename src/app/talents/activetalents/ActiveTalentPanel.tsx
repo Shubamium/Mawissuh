@@ -18,7 +18,7 @@ const ActiveTalentPanel = (props: Props) => {
 			</div>
 		</div>
 		<div className="active-talent-panel-footer">
-			<Link href={`/talent/${2}`}><span>View in Detail <FaArrowRight/> </span></Link>
+			<Link href={`/talent/${'Talent-Name'}`}><span>View in Detail <FaArrowRight/> </span></Link>
 		</div>
 	</div>
   )

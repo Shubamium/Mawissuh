@@ -1,6 +1,5 @@
 .active-talent-panel{
 	background-color:#E5E6E7;
-	// max-width: 200px;
 	width: min-content;
 	$panelBr:1em;
 	border-radius: $panelBr;
@@ -8,7 +7,6 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	// gap: 2em;
 	min-height: 400px;
 	.active-talent-panel-body{
 		padding: 4em .9em;

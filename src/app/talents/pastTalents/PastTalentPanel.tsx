@@ -19,7 +19,7 @@ const PastTalentPanel = (props: Props) => {
 			</div>
 		</div>
 		<div className="past-talent-panel-footer">
-			<Link href={`/talent/${2}`}><span>View in Detail <FaArrowRight/> </span></Link>
+			<Link href={`/talent/${'talent-name'}`}><span>View in Detail <FaArrowRight/> </span></Link>
 		</div>
 	</div>
   )
