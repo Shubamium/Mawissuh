@@ -7,12 +7,32 @@ import MainLayout from './rootLayout'
 import SidebarContextProvider from './context/SidebarContext'
 const fredoka = Fredoka({ subsets: ['latin'] })
 
+
+
+const title = 'Marimanagement 🐑🪄✨'
+const description = "Greetings! I am Marissa, a dedicated Talent Manager specializing in VTubers and Artists. With my expertise, I can guide you towards achieving remarkable success in your career! Let's embark on this journey together! 🌟"
+const banner = 'https://i.ibb.co/0VmGkMD/mari-banner.png'
 export const metadata: Metadata = {
-  title: 'Marimanagement 🐑🪄✨',
+  title: title,
   icons:{
 	icon:'/favicon.png'
   },
-  description: 'Talent Manager for VTubers. Providing high quality services for all!',
+  openGraph:{
+	title:title,
+	description:description,
+	authors:"shubamium",
+	images:[
+		banner
+	]
+  },
+  twitter:{
+	title:title,
+	card:'summary_large_image',
+	images:[
+		banner
+	]
+  },
+  description: description,
 }
 
 export default function RootLayout({
