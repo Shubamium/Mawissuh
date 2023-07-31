@@ -1,0 +1,56 @@
+.container_payment-guideline{
+	margin-top: 150px;
+	.title{
+		font-size: 500;
+		font-size: 2rem;
+		color: #8D8382;
+		text-align: center;
+		margin: .5em 0;
+		svg{
+			display: inline-block;
+			position: relative;
+			margin-right: .4em;
+			top: 5px;
+		}
+	}
+
+	.payment-panel{
+		background-color: #D9D9D9;
+		.payment-clamp{
+			max-width: 900px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 2em;
+		}
+
+		.guideline-list{
+			display: flex;
+			gap: 2em;
+			justify-content: center;
+			flex-direction: column;
+			.guideline{
+				display: grid;
+				grid-template-columns: 70px 1fr;
+				gap: 1em;
+				align-items: center;
+				.icon{
+					background-color: #8D8382;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					font-size: 2.5rem;
+					padding: .2em;
+					color: #F4E8E1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				p{
+					color:#8D8382;
+				}
+
+			}
+		}
+
+	}
+}

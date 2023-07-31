@@ -15,7 +15,7 @@ const ServiceGuideline = (props: Props) => {
 			</div>
 
 			<div className="img-part">
-				<Image src="/static/images/art/chibis/managementTransparent.png" alt='management chibi' width={250} height={250}/>
+				<Image src="/static/images/art/chibis/managementTransparent.png" alt='management chibi' width={350} height={350}/>
 			</div>
 		</div>
 	</div>
