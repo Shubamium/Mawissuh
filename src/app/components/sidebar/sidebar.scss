@@ -81,11 +81,13 @@
 				transition: all 250ms ease;
 				position: absolute;
 				animation: glow 3s ease infinite, speen 120s linear infinite reverse, cast 1s ;
+				animation-duration: 3s, 120s, 1s;
 				transform: translateX(-50%);
 
 			}
 			&:hover::after{
 				scale: 2;
+				animation-duration: 3s, 10s, 1s;
 			}
 		
 		}

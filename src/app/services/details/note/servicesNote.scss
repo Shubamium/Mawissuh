@@ -1,5 +1,5 @@
 .services-note{
-	max-width: min(55%,900px);
+	max-width: min(85%,700px);
 	display: grid;
 	margin: 0 auto;
 	grid-template-columns: 2fr 1fr;
@@ -23,6 +23,8 @@
 			width: 100%;
 			object-fit: contain;
 			scale: 1.4;
+			position: relative;
+			z-index: 250;
 		}
 		.bg{
 			left: 0%;
