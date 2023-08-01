@@ -9,6 +9,7 @@ const nextConfig = {
 			pathname: '/assets/**',
 		  },
 		],
+		domains: ['cdn.sanity.io']
 	},
 }
 

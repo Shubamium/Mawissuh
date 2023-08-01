@@ -22,7 +22,7 @@
 		width: 100%;
 		padding-top: 1em;
 		.title{
-			color:#584C4B;
+			color:#584c4bbe;
 			font-weight: 500;
 			font-size: 1.8rem;
 			text-indent: -2px;
@@ -50,12 +50,15 @@
 	.image-part{
 		flex-basis: 1;
 		img{
-			scale: 1.2;
+			scale: 1.3;
+			margin: 0 -1em;
 			width: 100%;
 			height: 100%;
 			display: block;
 			object-fit: contain;
 			object-position: center;
+			user-select: none;
+			pointer-events: none;
 		}
 	}
 }
