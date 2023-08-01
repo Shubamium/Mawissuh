@@ -2,10 +2,11 @@ import Image from "next/image"
 import './experimental.scss'
 import ExperimentalCustomPanel from "./panel/ExperimentalCustomPanel"
 import { PortableText } from '@portabletext/react'
-import { getExperimentalText } from "@/app/db/sanityUtils"
+import { getExperimentalServices, getExperimentalText } from "@/app/db/sanityUtils"
 
 const Experimental = async() => {
 	const experimental = await getExperimentalText();
+	const services = await getExperimentalServices();
 	return (
 		<div id="container_experimental">
 			<div className="experimental-title-panel">
@@ -22,9 +23,20 @@ const Experimental = async() => {
 			</div>
 
 			<div className="experimental-panels">
+				{services && services.map(
+					(service:any,index:number)=>{
+						return (
+							<ExperimentalCustomPanel
+								key={'exp-serv' + index}
+								title={service.title}
+								text={service.description}
+							/>
+						)
+					}
+				)}
+				{/* <ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
 				<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
-				<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
-				<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/>
+				<ExperimentalCustomPanel title="Experimental Service" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tenetur deserunt enim dicta animi rem architecto libero, dolorem totam, alias odio consequatur eaque, in molestiae est sapiente recusandae doloremque quae."/> */}
 			</div>
 		</div>
 	)

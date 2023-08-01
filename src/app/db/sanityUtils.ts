@@ -22,6 +22,17 @@ export async function getServices() {
 	
 	return services
 }
+export async function getExperimentalServices() {
+	const services = await sanityClient.fetch(`
+		*[_type == "experimental_services"] | order(_createdAt asc){
+			_id,
+			title,
+			description
+		}
+	`)
+	
+	return services
+}
 
 export async function getExperimentalText(){
 	const experimental = await sanityClient.fetch(`
