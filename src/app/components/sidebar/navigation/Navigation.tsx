@@ -15,7 +15,7 @@ const Navigation = () => {
 	
 	return (
 		<nav className='navigation'>
-			<Image src={"/static/images/art/icons/badge/badge_gradient.svg"} alt='' width={150} height={150} className='decor_badge'/>
+			<Image src={"/static/images/art/icons/badge/badge_gradient.svg"} alt='' width={350} height={350} className='decor_badge'/>
 			<ul className='navigation-links'>
 				<li className={homeClass('/')}>
 					<Link className="nav-link" href={"/"} > <FaHome/> Home </Link>
