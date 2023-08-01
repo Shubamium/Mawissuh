@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import './serviceNavigation.scss'
+
 const ServiceNavigation = () => {
 
 	const pathName = usePathname(); 

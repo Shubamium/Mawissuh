@@ -18,7 +18,7 @@ type serviceListProp = {
 }
 const ServiceList = ({layout,title,paragraph,image,notes} : serviceListProp) => {
   return (
-	<div className='service-list-container'>
+	<div className='service-list-container' id={encodeURI(title)}>
 		<div className={`container-clamp service-layout ${layout === 'right' ? 'reverse' : ''}`}>
 			<div className="text-part">
 				<h2 className='title'>{title ?? 'Talent Creation'}</h2>
@@ -28,9 +28,6 @@ const ServiceList = ({layout,title,paragraph,image,notes} : serviceListProp) => 
 					/>
 				</div>				
 				<div className="notes">
-					{/* <div className="service-note">
-						<p>This will be for getting your channel up to standards and presented in a professional manner!</p>
-					</div> */}
 					{notes.map((note,index)=>{
 						return <div className='service-note' key={`service-notes-${index}`} style={{backgroundColor:note.bgColor.hex}}>
 							<p>{note.note}</p>

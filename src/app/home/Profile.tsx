@@ -5,9 +5,9 @@ import { RiMailFill } from 'react-icons/ri'
 import { FaDiscord, FaTwitter } from 'react-icons/fa'
 import DiamondStats from '../components/general/stats/DiamondStats'
 
-type Props = {}
 
-const Profile = (props: Props) => {
+
+const Profile = () => {
   return (
 	<div className='container_profile'>
 		<div className="main-section">

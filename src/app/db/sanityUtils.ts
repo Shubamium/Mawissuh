@@ -23,6 +23,32 @@ export async function getServices() {
 	return services
 }
 
+export async function getExperimentalText(){
+	const experimental = await sanityClient.fetch(`
+		*[_type == "general" && preset == "main"]{
+			text_experimental
+		}
+	`)
+	return experimental[0]
+}
+
+export async function getPricing(){
+	const experimental = await sanityClient.fetch(`
+		*[_type == "general" && preset == "main"]{
+			pricing
+		}
+	`)
+	return experimental[0]
+}
+
+export async function getCommissionStatus(){
+	const experimental = await sanityClient.fetch(`
+		*[_type == "general" && preset == "main"]{
+			text_commission
+		}
+	`)
+	return experimental[0]
+}
 
 const builder = imageUrlBuilder(sanityClient);
 export function getImageUrlFromRef(ref:string){

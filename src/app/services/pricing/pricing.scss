@@ -43,6 +43,7 @@ $grey: #4B5D66;
 				}
 				.service-list{
 					background-color: $grey;
+					min-height: 250px;
 					.service {
 						display: flex;
 						justify-content: space-between;
@@ -57,6 +58,16 @@ $grey: #4B5D66;
 						&.learn-more{
 							justify-content: end;
 							font-size: 1.2rem;
+							transition: all 250ms ease;
+							transform: translateX(-4px);	
+							&:hover{
+								transform: translateX(1px);	
+							}
+							svg{
+								display: inline-block;
+								position: relative;
+								top: 3px;
+							}
 						}
 	
 						.checkmark{
