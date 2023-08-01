@@ -50,6 +50,23 @@ export async function getCommissionStatus(){
 	return experimental[0]
 }
 
+export async function getProfile(){
+	const profile = await sanityClient.fetch(`
+		*[_type == "profile" && preset == "main"]{
+			name,
+			bio,
+			tagline,
+			stats,
+			achievements,
+			achievement_unlocked,
+			profile_pic,
+			classifications,
+			skills
+		}
+	`)
+	console.log(profile);
+	return profile[0]
+}
 
 export async function getActiveTalents(){
 	const talents = await sanityClient.fetch(`

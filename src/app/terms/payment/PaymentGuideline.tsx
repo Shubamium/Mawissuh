@@ -11,7 +11,7 @@ import './paymentGuideline.scss'
 const PaymentGuideline = (props: Props) => {
   return (
 	<div className="container_payment-guideline">
-		<h2 className='title'><FaCoins/> Talent Acknowledgement</h2>
+		<h2 className='title'><FaCoins/> Payment Guideline</h2>
 		<div className="payment-panel">
 			<div className="payment-clamp">
 				<div className="img-part">
