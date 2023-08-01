@@ -6,6 +6,9 @@ type serviceListProp = {
 	layout?: 'left' | 'right';
 	title?:string;
 	description?:string;
+	note?:[
+		
+	]
 }
 const ServiceList = ({layout,title,description} : serviceListProp) => {
   return (

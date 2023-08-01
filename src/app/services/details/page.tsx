@@ -10,7 +10,6 @@ const DetailsPage = () => {
 		<ServiceList  layout="right"/>
 		<ServiceList layout="left"  />
 		<ServiceList  layout="right"/>
-
 		<ServicesNote/>
 	</div>
   )
