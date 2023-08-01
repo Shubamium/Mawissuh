@@ -52,7 +52,7 @@ export async function getCommissionStatus(){
 
 
 export async function getActiveTalents(){
-	const talents = sanityClient.fetch(`
+	const talents = await sanityClient.fetch(`
 		*[_type == "talents" && status == "active"]{
 			_id,
 			name,
@@ -65,7 +65,7 @@ export async function getActiveTalents(){
 
 
 export async function getInactiveTalents(){
-	const talents = sanityClient.fetch(`
+	const talents = await sanityClient.fetch(`
 		*[_type == "talents" && status == "inactive"]{
 			_id,
 			name,
@@ -75,8 +75,31 @@ export async function getInactiveTalents(){
 	`)
 	return talents;
 }
+export async function getTalent(id:string){
+	const talents = await sanityClient.fetch(`
+		*[_type == "talents" && _id == "${id}"]{
+			name,
+			description_full,
+			tagline,
+			managed_for,
+			testimonials,
+			traits,
+			stats,
+			achievements,
+			status,
+			image
+		}
+	`)
+	return talents[0];
+}
 
 const builder = imageUrlBuilder(sanityClient);
 export function getImageUrlFromRef(ref:string){
 	return builder.image(ref)
+}
+
+export function toUpperCase(str:string){
+	const all = str.split('');
+	all[0] = all[0].toUpperCase();
+	return all.join('')
 }

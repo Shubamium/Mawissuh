@@ -3,27 +3,32 @@ import './talentDetailPanel.scss'
 import { RiMailFill } from 'react-icons/ri'
 import DiamondStats from '@/app/components/general/stats/DiamondStats'
 import Image from 'next/image'
+import { getImageUrlFromRef, getTalent, toUpperCase } from '@/app/db/sanityUtils'
+import {PortableText} from '@portabletext/react'
+
 type talentDetailPanelProps = {
 	params:{
 		name:string
 	}
 }
-const TalentDetailPanel = ({params} : talentDetailPanelProps) => {
+const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 	const talentName =  params.name
+	const talent = await getTalent(talentName);
+	console.log(talent);
 	return (
 		<div className='talent-detail-panel'>
 			<div className="talent-detail-header">
 				<div className="talent-pfp">
-					<Image src="https://marimanagement.carrd.co/assets/images/image03.jpg" alt='talent-pfp' width={250} height={250}/>
+					<Image src={getImageUrlFromRef(talent.image).url() ?? "https://marimanagement.carrd.co/assets/images/image03.jpg"} alt='talent-pfp' width={250} height={250}/>
 				</div>
 				<div className="talent-info-container">
 					<div className="talent-data">
 						<div className="talent-title">
-							<h2>{talentName}</h2>
-							<a href="#" target='_blank' className='handle'>Talent's Tagline</a>
+							<h2>{talent.name}</h2>
+							<a href="#" target='_blank' className='handle'>{talent.tagline}</a>
 						</div>
 						<div className="talent-testimonials">
-							<p>“ Testimonials, What your client says about your services! ”</p>
+							<p>“{talent.testimonials}”</p>
 						</div>
 					</div>
 					<div className="side-container">
@@ -35,7 +40,7 @@ const TalentDetailPanel = ({params} : talentDetailPanelProps) => {
 							<a href="#"><FaYoutube/></a>
 						</div>
 						<div className="talent-status">
-							<p>Active</p>
+							<p>{toUpperCase(talent.status)}</p>
 						</div>
 					</div>
 				</div>
@@ -45,43 +50,49 @@ const TalentDetailPanel = ({params} : talentDetailPanelProps) => {
 					<div className="talent-detail-sidebar-top">
 						<div className="talent-detail-sidebar-panel">
 							<h2>Under my management for:</h2>
-							<p>2 months</p>
+							<p>{talent.managed_for}</p>
 						</div>
 						<div className="talent-detail-sidebar-panel">
-							<h2>Personality Traits:</h2>
-							<p>Idol</p>
+							<h2>Traits:</h2>
+							<p>{talent.traits}</p>
 						</div>
 					</div>
 					<div className="talent-detail-sidebar-panel stats">
-						<div className="stat-fields">
-							<h2>Cooperation:</h2>
-							<DiamondStats star={2} range={6}/>
-						</div>
-						<div className="stat-fields">
-							<h2>Activeness:</h2>
-							<DiamondStats star={4} range={6}/>
-						</div>
-						<div className="stat-fields">
-							<h2>Potential:</h2>
-							<DiamondStats star={2} range={6}/>
-						</div>
-						<div className="stat-fields">
-							<h2>Cooperation:</h2>
-							<DiamondStats star={6} range={6}/>
-						</div>
-						<div className="stat-fields">
-							<h2>Cooperation:</h2>
-							<DiamondStats star={1} range={6}/>
-						</div>
+						{
+							talent.stats && talent.stats.map((stat:any,index:number)=>{
+								return (
+									<div className="stat-fields" key={'talent-detail-stats-'+index}>
+										<h2>{stat.label}:</h2>
+										<DiamondStats star={stat.rating} range={6}/>
+									</div>
+								)
+							})
+						}
 					</div>		
 					
 				</div>
 				<div className="talent-detail-main">
 					<div className="talent-description">
-						<p>Write a complete description here, what services you’ve provided for them. Write a complete description here, what services you’ve provided for them. Write a complete description here, what services you’ve provided for them.Write a complete description here, what services you’ve provided for them.</p>
+						<PortableText
+							value={talent.description_full}
+						/>
 					</div>
 					<div className="talent-achievements">
-						<div className="achievements">
+						{
+							talent.achievements && talent.achievements.map((achievement:any,index:number)=>{
+								return (
+									<div className="achievements" key={'talent-detail-achievement-'+index}>
+										<div className="icon">
+											<FaTrophy/>
+										</div>
+										<div className="text">
+											<p>{achievement}</p>
+										</div>
+									</div>
+								)
+							})
+						}
+						{/* <div className="achievements">
 							<div className="icon">
 								<FaTrophy/>
 							</div>
@@ -104,7 +115,7 @@ const TalentDetailPanel = ({params} : talentDetailPanelProps) => {
 							<div className="text">
 								<p>This talent’s notable achievements.</p>
 							</div>
-						</div>
+						</div> */}
 						
 					</div>
 				</div>
