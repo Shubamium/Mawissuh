@@ -50,6 +50,32 @@ export async function getCommissionStatus(){
 	return experimental[0]
 }
 
+
+export async function getActiveTalents(){
+	const talents = sanityClient.fetch(`
+		*[_type == "talents" && status == "active"]{
+			_id,
+			name,
+			description_short,
+			image
+		}
+	`)
+	return talents;
+}
+
+
+export async function getInactiveTalents(){
+	const talents = sanityClient.fetch(`
+		*[_type == "talents" && status == "inactive"]{
+			_id,
+			name,
+			description_short,
+			image
+		}
+	`)
+	return talents;
+}
+
 const builder = imageUrlBuilder(sanityClient);
 export function getImageUrlFromRef(ref:string){
 	return builder.image(ref)
