@@ -11,7 +11,6 @@ const ExperimentalCustomPanel = ({title,text}:experimentalCustomPanelType) => {
 		<PortableText
 			value={text}
 		/>
-		{/* <p className="detail">{text || 'Write the detail of this experimental section here!'}</p> */}
 	</div>
   )
 }
