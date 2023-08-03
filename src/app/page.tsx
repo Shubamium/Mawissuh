@@ -5,7 +5,7 @@ export const revalidate = 10
 
 export default function Home() {
   return (
-    <div className="page">
+    <div className="page" >
 		<TitleHome/>
 		<Profile/>
 	</div>

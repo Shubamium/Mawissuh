@@ -45,9 +45,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" id="page-container">
 		<body className={fredoka.className} >
-				
+				<div id="modal-container">
+				</div>
 				<SidebarContextProvider>
 					<MainLayout>
 							<Sidebar/>

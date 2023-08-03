@@ -1,20 +1,16 @@
 import './sidebar.scss'
 import Image from 'next/image'
 import Navigation from './navigation/Navigation'
-import ButtonSidebarHide from './buttons/ButtonSidebarHide'
 import ButtonSidebarShow from './buttons/ButtonSidebarShow'
-import Button from '../general/button/button'
-import { PiWarning } from 'react-icons/pi'
 import { IoIosMail } from 'react-icons/io' 
 import { BsTwitter, BsDiscord } from 'react-icons/bs' 
+import SidebarTop from './SidebarTop'
+
 const Sidebar = () => {
 	return (
 		<header className="sidebar">
 			<div className='actions'>
-				<div className="sidebar-top">
-					<ButtonSidebarHide/>
-					<Button className='btn-warning'><PiWarning/> Note</Button>
-				</div>
+				<SidebarTop/>
 				<Navigation/>
 				<div className="sidebar-bottom">
 					<h2>Contacts✧</h2>

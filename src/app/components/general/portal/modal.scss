@@ -1,0 +1,17 @@
+.modal{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000000d2;
+	z-index: 1000;
+	pointer-events: all;
+}
+
+
+#modal-container{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 1000;
+	pointer-events: none;
+}
