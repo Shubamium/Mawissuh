@@ -21,18 +21,18 @@
 			left: calc(50% - 340px);
 			top: -40px;
 			#star_bottom{
-				animation: speen 4s infinite linear;
+				animation: speen 6s infinite linear;
 				transform-origin: 45% 86%;
 				animation-delay: 200ms;
 			}
 			#star_middle{
-				animation: speen 5s infinite linear;
+				animation: speen 10s infinite linear;
 				transform-origin: 20% 50%;
 				animation-delay: 100ms;
 
 			}
 			#star_top{
-				animation: speen 4s infinite linear reverse;
+				animation: speen 12s infinite linear reverse;
 				transform-origin: 70% 25%;
 				animation-delay: 300ms;
 			}
