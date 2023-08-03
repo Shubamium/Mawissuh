@@ -4,9 +4,11 @@
 	margin: 0 auto;
 	margin-top: 20vh;
 	background-color: #CFB099;
-
+	
 	color: #584C4B;
 	border-radius: 2em;
+	transition: all 250ms ease;
+	animation: pop-up 250ms linear forwards;
 	.warning-body{
 		background-color:#B59177;
 		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.199);
