@@ -9,20 +9,33 @@ import { PortableText } from '@portabletext/react'
 
 const Profile = async() => {
 	const profile = await getProfile();
+	console.log(profile.classifications);
+	const calculateExp = (totalExp:number)=>{
+		const date1 = new Date('31 Oct 1998')
+		const date2 = new Date();
+		const difference = date1.getTime() - date2.getTime();
+		let totalDays = Math.ceil(difference / (1000 * 3600 * 24));
+		const year = Math.abs(totalDays/365);
+		const exp = year - Math.floor(year);
+		const currentExp = Math.floor(totalExp * exp)
+		return {exp:currentExp,level:Math.floor(year)};
+	}
 
+	const totalExp = 37590;
+	const levelData = calculateExp(totalExp)
 	return (
-		<div className='container_profile'>
+		<div className='container_profile shadow-md'>
 			<div className="main-section">
 				<div className="profile-sidebar-container">
-					<div className='profile-pic'>
-						<Image src={getImageUrlFromRef(profile.profile_pic).url() ?? "/static/images/art/chara_profile.png"} alt='mawissuh pfp' width={300} height={300}/>
+					<div className='profile-pic '>
+						<Image src={getImageUrlFromRef(profile.profile_pic).url() ?? "/static/images/art/chara_profile.png"} alt='mawissuh pfp' className='shadow-solid' width={300} height={300}/>
 					</div>
 					<div className="profile-contacts">
 						<a href="#" target='_blank'><RiMailFill/> </a>
 						<a href="#" target='_blank'><FaTwitter/> </a>
 						<a href="#" target='_blank'><FaDiscord/> </a>
 					</div>
-					<div className="profile-stats">
+					<div className="profile-stats shadow-solid">
 						<div className="stats-header">
 							<h2>Stats</h2>
 						</div>
@@ -30,42 +43,44 @@ const Profile = async() => {
 							{profile.stats && profile.stats.map((stat:any,index:number)=>{
 								return (
 									<div className="stat-field" key={'profile-stat-field'+ index}>
-										<p>{stat.label}:</p>
-										<DiamondStats star={stat.rating} range={6}/>
+										<p color='#9cbad0'>{stat.label}:</p>
+										<DiamondStats color='#9cbad0' star={stat.rating} range={6}/>
 									</div>
 								)
 							})}
 						
 						</div>
 					</div>
-					<div className="profile-sidebar-extra">
+					<div className="profile-sidebar-extra shadow-solid">
 
 					</div>
 				</div>
 				<div className="profile-body-container">
 					<div className="profile-body-title">
 						<div className="main-info">
-							<div className="identity">
+							<div className="identity shadow-solid">
 								<h2 className='pfp-name'>{profile.name ?? 'Marissa🐑🪄'}</h2>
 								<p className='sub'>{profile.tagline}</p>
 							</div>
 							<div className="stat">
-								<h2 className='level'><span>Lv.</span>24</h2>
-								<p className='exp'><span className='current'>1466</span>/ 2560XP </p>
+								<h2 className='level shadow-solid'><span>Lv.</span>{levelData.level}</h2>
+								<p className='exp'><span className='current'>{levelData.exp}</span>/ {totalExp}XP </p>
 							</div>
-						</div>
+						</div>								
 						<div className="classifications">
-								{profile.classifications && profile.classifications.map(
+								{profile.classifications.map(
 									(classification:any,index:number)=>{
-										<div className="classification" key={'classification' + index}>
-											<p>{classification}</p>	
-										</div>
+										return (
+											<div className="classification shadow-solid" key={'classification' + index}>
+												<p>{classification}</p>	
+											</div>
+										)
 									}
 								)}
 						</div>
 					</div>
 
-					<div className="profile-body-bio">
+					<div className="profile-body-bio shadow-solid">
 						{profile.bio 
 							? (
 								<PortableText
@@ -81,15 +96,15 @@ const Profile = async() => {
 						<div className="section-right"></div>
 					</div>
 
-					<div className="profile-body-skills">
+					<div className="profile-body-skills shadow-md">
 
 						{profile.skills && profile.skills.map((skill:any, index:number)=>{
 							return (
 								<div className="skill" key={'profile-skills'+ index}>
-									<div className="icon">
-										<Image src={getImageUrlFromRef(skill.icon).url() ?? '/static/images/art/icons/skill/skill_placeholder.png'} alt='skill icon' width={150} height={150} />
+									<div className="icon ">
+										<Image src={getImageUrlFromRef(skill.icon).url() ?? '/static/images/art/icons/skill/skill_placeholder.png'} alt='skill icon' width={150} height={150} className='shadow-solid'/>
 									</div>
-									<div className="skill-info">
+									<div className="skill-info shadow-solid">
 										<div className="skill-header">
 											<h2>{skill.title || 'Skill Title'}</h2>
 											<p className='tier'>Tier {skill.tier || '4'}</p>
@@ -102,7 +117,7 @@ const Profile = async() => {
 					</div>
 				</div>
 			</div>
-			<div className="achievement-section">
+			<div className="achievement-section shadow-md">
 				<div className="achievement-header">
 					<h2>Achievements</h2>
 					<p className='total'>{profile.achievements.length ?? 6}/{profile.achievement_unlocked} Unlocked</p>
@@ -113,9 +128,9 @@ const Profile = async() => {
 							return (
 								<div className="achievement" key={'profile-achievement-' + index}>
 									<div className="icon">
-										<Image src={getImageUrlFromRef(achievement.icon).url() ?? '/static/images/art/icons/skill/skill_placeholder.png'} alt='skill icon' width={150} height={150} />
+										<Image className='shadow-solid' src={getImageUrlFromRef(achievement.icon).url() ?? '/static/images/art/icons/skill/skill_placeholder.png'} alt='skill icon' width={150} height={150} />
 									</div>
-									<div className="achievement-info">
+									<div className="achievement-info shadow-solid">
 										<h2>{achievement.title ?? 'Achievement Name'}</h2>
 										<p>{achievement.text ?? 'Achievement Info'}</p>
 									</div>

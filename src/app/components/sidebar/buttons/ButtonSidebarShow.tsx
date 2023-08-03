@@ -7,7 +7,7 @@ const ButtonSidebarShow = () => {
 	const sidebarContext = useContext(SidebarCollapseContext)
 	return (
 		<Button 
-		 	className='sidebar-button_show'
+		 	className='sidebar-button_show shadow-center'
 		 	onClick={()=>{
 				sidebarContext.setState(state => !state)
 			}}>

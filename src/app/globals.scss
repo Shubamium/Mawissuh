@@ -168,6 +168,7 @@ main{
 	width: 100%;
 	user-select: none;
 	pointer-events: none;
+	z-index: -1000;
 	.top-spell_l{
 		opacity: .05;
 		pointer-events: none;
@@ -206,4 +207,24 @@ main{
 			right: -500px;
 		}
 	}
+}
+
+
+.shadow-lg{
+	box-shadow: -4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+}
+.shadow-md{
+	box-shadow: -4px 4px 5px 0px rgba(58, 118, 196, 0.144);
+}
+.shadow-sm{
+	box-shadow: -4px 4px 2px 0px rgba(27, 65, 114, 0.425);
+}
+.shadow-center{
+	box-shadow: 0px 4px 6px 0px rgba(75, 142, 230, 0.397);
+
+}
+
+.shadow-solid{
+	box-shadow: -4px 4px 0px 0px rgba(58, 118, 196, 0.295);
+
 }

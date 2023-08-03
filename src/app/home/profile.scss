@@ -59,9 +59,10 @@
 				border-radius: .5em;
 				.stats-header{
 					text-align: center;
-					padding: .4em .1em;
+					padding: .1em .1em;
 					h2{
-						font-weight: 400;
+						font-weight: 500;
+						opacity: .5;
 					}
 				}
 				.stats-body{
@@ -136,6 +137,7 @@
 						.level{
 							background-color: #DCE2B9;
 							color: #586361;
+							margin: .5em 0;
 							font-size: 2.5rem;
 							font-weight: 600;
 							span{
@@ -163,7 +165,12 @@
 						padding: .5em;
 						color: #586361;
 						background-color:#DCE2B9;
+						transition: all 250ms ease;
+						&:hover{
+							scale: 1.08;
+						}
 					}
+
 				}
 			}
 			.profile-body-bio{
@@ -257,7 +264,13 @@
 				display: grid;
 				grid-template-columns: 80px 1fr;
 				gap: 1em;
+
+				transition:  all 250ms ease;
+				&:hover{
+					transform: translateY(-5%);
+				}
 				.icon{
+					height: min-content;
 					img{
 						width: 100%;
 						height: 100%;
@@ -271,7 +284,7 @@
 					padding: .6em 1em;
 					h2{
 						font-size: 1.2rem;
-						font-weight: 00;
+						font-weight: 500;
 					}
 					color: #616161;
 					background-color: #EDD6C8;
