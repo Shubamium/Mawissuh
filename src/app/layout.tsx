@@ -5,8 +5,9 @@ import { Fredoka } from 'next/font/google'
 import Sidebar from './components/sidebar/Sidebar'
 import MainLayout from './rootLayout'
 import SidebarContextProvider from './context/SidebarContext'
+import Image from 'next/image'
 const fredoka = Fredoka({ subsets: ['latin'] })
-
+import SpellDecor from './components/general/decor/SpellDecor'
 
 
 const title = 'Marimanagement 🐑🪄✨'
@@ -46,10 +47,12 @@ export default function RootLayout({
   return (
     <html lang="en">
 		<body className={fredoka.className} >
+				
 				<SidebarContextProvider>
 					<MainLayout>
 							<Sidebar/>
 							<main>
+								<SpellDecor/>
 								{children}
 							</main>
 					</MainLayout>

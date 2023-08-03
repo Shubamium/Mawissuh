@@ -123,6 +123,8 @@ $sidebarSize:30vw;
 main{
 	padding-bottom: 200px;
 	margin-left: $sidebarSize;
+	position: relative;
+	overflow-x: hidden;
 }
 
 // Animation
@@ -156,5 +158,52 @@ main{
 	}
 	to{
 		scale: 1.2;
+	}
+}
+
+
+.decor_spell{
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	user-select: none;
+	pointer-events: none;
+	.top-spell_l{
+		opacity: .05;
+		pointer-events: none;
+		left: -11%;
+		top: calc( 0% - 200px);
+		z-index: -1;
+		scale: 2.1;
+		position: absolute;
+	}
+	.top-spell_r{
+		transition: all 250ms ease;
+		pointer-events: none;
+		transform: translate(-50%);
+		position: absolute;
+		scale: 2.3;
+		top: -200px;
+		right: 0px;
+		opacity: .1;
+	}
+
+	&.hidden{
+		.top-spell_r{
+			right: -500px;
+		}
+	}
+}
+
+@media screen and (max-width:1500px) {
+	.decor_spell{
+		scale: .5;
+		opacity: .5;
+		.top-spell_l{
+			left: -71%;
+		}
+		.top-spell_r{
+			right: -500px;
+		}
 	}
 }
