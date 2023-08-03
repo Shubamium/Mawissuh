@@ -3,7 +3,7 @@ import Image from 'next/image';
 import './serviceList.scss'
 import { getImageUrlFromRef } from '@/app/db/sanityUtils';
 import { PortableText } from '@portabletext/react';
-
+import urlSlug from 'url-slug'
 type serviceListProp = {
 	layout?: 'left' | 'right';
 	title:string;
@@ -18,7 +18,7 @@ type serviceListProp = {
 }
 const ServiceList = ({layout,title,paragraph,image,notes} : serviceListProp) => {
   return (
-	<div className='service-list-container' id={encodeURI(title)}>
+	<div className='service-list-container' id={urlSlug(title)}>
 		<div className={`container-clamp service-layout ${layout === 'right' ? 'reverse' : ''}`}>
 			<div className="text-part">
 				<h2 className='title'>{title ?? 'Talent Creation'}</h2>
