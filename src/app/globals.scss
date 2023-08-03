@@ -148,3 +148,13 @@ main{
 		rotate: 360deg;
 	}
 }
+@keyframes expand {
+	from{
+		scale: 1.2;
+	}50%{
+		scale: 1;
+	}
+	to{
+		scale: 1.2;
+	}
+}
