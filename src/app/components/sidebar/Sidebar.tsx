@@ -23,7 +23,7 @@ const Sidebar = () => {
 				</div>
 			</div>
 		 	<div className="image-part">
-				<Image src="/static/images/art/chara_portrait.png" alt='Mawissuh Art' className='shadow-center' height="1500" width="1500"/>
+				<Image src="/static/images/art/chara_portrait.png" alt='Mawissuh Art' className='shadow-center' height="150" width="150"/>
 			</div>
 			<ButtonSidebarShow/>
 		</header>

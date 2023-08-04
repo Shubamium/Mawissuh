@@ -20,6 +20,10 @@ const Experimental = async() => {
 						value={experimental.text_experimental}
 					/>
 				</div>
+				<div className="decor_gear">
+					<Image className="gear_l" src={"/static/images/art/decor/gear.png"} width={250} height={250}/>
+					<Image className="gear_r" src={"/static/images/art/decor/gear.png"} width={250} height={250}/>
+				</div>
 			</div>
 
 			<div className="experimental-panels">

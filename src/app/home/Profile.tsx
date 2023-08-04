@@ -10,19 +10,24 @@ import { PortableText } from '@portabletext/react'
 const Profile = async() => {
 	const profile = await getProfile();
 	console.log(profile.classifications);
-	const calculateExp = (totalExp:number)=>{
+
+	const calculateExp = ()=>{
 		const date1 = new Date('31 Oct 1998')
 		const date2 = new Date();
 		const difference = date1.getTime() - date2.getTime();
+
 		let totalDays = Math.ceil(difference / (1000 * 3600 * 24));
+
 		const year = Math.abs(totalDays/365);
-		const exp = year - Math.floor(year);
+		const level = Math.floor(year);
+		let totalExp = level * 2400;
+		const exp = year - level;
 		const currentExp = Math.floor(totalExp * exp)
-		return {exp:currentExp,level:Math.floor(year)};
+		const percentage = ((currentExp / totalExp) * 1000/10).toFixed(3)
+		return {exp:currentExp,level:level,totalExp,percentage };
 	}
 
-	const totalExp = 37590;
-	const levelData = calculateExp(totalExp)
+	const levelData = calculateExp()
 	return (
 		<div className='container_profile shadow-md'>
 			<div className="main-section">
@@ -64,7 +69,8 @@ const Profile = async() => {
 							</div>
 							<div className="stat">
 								<h2 className='level shadow-solid'><span>Lv.</span>{levelData.level}</h2>
-								<p className='exp'><span className='current'>{levelData.exp}</span>/ {totalExp}XP </p>
+								<p className='exp'><span className='current'>{levelData.exp}</span> / {levelData.totalExp}EXP </p>
+								<p className='exp'> {levelData.percentage}% </p>
 							</div>
 						</div>								
 						<div className="classifications">

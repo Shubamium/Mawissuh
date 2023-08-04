@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './experimentalCustomPanel.scss'
 import {PortableText} from '@portabletext/react'
 type experimentalCustomPanelType = {
@@ -11,6 +12,7 @@ const ExperimentalCustomPanel = ({title,text}:experimentalCustomPanelType) => {
 		<PortableText
 			value={text}
 		/>
+		
 	</div>
   )
 }
