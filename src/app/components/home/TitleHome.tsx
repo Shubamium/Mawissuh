@@ -5,7 +5,7 @@ import { getCommissionStatus } from '@/app/db/sanityUtils'
 import { PortableText } from '@portabletext/react'
 
 const HomeTitle = async() => {
-	const status = await getCommissionStatus();
+	const status:any = await getCommissionStatus();
 	return (
 		<div id="container_home-title">
 			<div className="decor_star">

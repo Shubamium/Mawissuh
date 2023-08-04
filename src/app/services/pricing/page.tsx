@@ -10,7 +10,7 @@ import PricingNote from './client/PricingNote'
 const dynamic = 'force-dynamic'
 const ServicesPricing = async () => {
 	const general = await getPricing();
-	const servicesList = await getServices()
+	const servicesList:any[] = await getServices()
 	return (
 		<div id='container_pricing'>
 			<h2 className='panel-header'>  Pricing</h2>

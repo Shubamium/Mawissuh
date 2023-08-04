@@ -5,8 +5,8 @@ import PastTalentPanel from "./pastTalents/PastTalentPanel"
 import './talentsPage.scss'
 const TalentsPage = async() => {
 
-	const activeTalents = await getActiveTalents();
-	const inActiveTalents = await getInactiveTalents();
+	const activeTalents:any[] = await getActiveTalents();
+	const inActiveTalents:any[] = await getInactiveTalents();
 	return (
 		<div>
 			<div id="container_active-talents">
@@ -54,7 +54,6 @@ const TalentsPage = async() => {
 					)}
 				</div>
 			</div>
-
 		</div>
 	)
 }

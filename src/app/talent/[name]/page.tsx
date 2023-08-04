@@ -13,8 +13,7 @@ type talentDetailPanelProps = {
 }
 const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 	const talentName =  params.name
-	const talent = await getTalent(talentName);
-	console.log(talent);
+	const talent:any = await getTalent(talentName);
 	return (
 		<div className='talent-detail-panel'>
 			<div className="talent-detail-header">

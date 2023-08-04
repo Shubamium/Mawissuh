@@ -8,7 +8,7 @@ import { getImageUrlFromRef, getProfile } from '../db/sanityUtils'
 import { PortableText } from '@portabletext/react'
 
 const Profile = async() => {
-	const profile = await getProfile();
+	const profile:any = await getProfile();
 	console.log(profile.classifications);
 
 	const calculateExp = ()=>{

@@ -20,6 +20,7 @@ export const sanityClient = createClient({
 const config = {
 	next: { revalidate: 5 }
 }
+
 export async function getServices() {
 	const services = await nextSanityClient.fetch({
 		query:`
@@ -34,11 +35,11 @@ export async function getServices() {
 		config
 	} 
 	)
-	
-	return services
+	return services as any;
 }
+
 export async function getExperimentalServices() {
-	const services:any[] = await nextSanityClient.fetch({
+	const services = await nextSanityClient.fetch({
 		query:`
 		*[_type == "experimental_services"] | order(_createdAt asc){
 			_id,
@@ -48,10 +49,7 @@ export async function getExperimentalServices() {
 		`,
 		config
 	})
-	services.forEach((element:{description:string}) => {
-		console.log(element.description);
-	});
-	return services
+	return services as any
 }
 
 export async function getExperimentalText(){
@@ -63,29 +61,35 @@ export async function getExperimentalText(){
 		`,
 		config
 	})
-	return experimental[0]
+	return experimental[0] as any
 }
 
 export async function getPricing(){
-	const experimental = await sanityClient.fetch(`
+	const query = `
 		*[_type == "general" && preset == "main"]{
 			pricing
 		}
-	`)
-	return experimental[0]
+	`
+	const pricing:any[] = await nextSanityClient.fetch({
+		query,config
+	})
+	return pricing[0] as any
 }
 
 export async function getCommissionStatus(){
-	const experimental = await sanityClient.fetch(`
+	const query = `
 		*[_type == "general" && preset == "main"]{
 			text_commission
 		}
-	`)
-	return experimental[0]
+	`
+	const commStatus:any[] = await nextSanityClient.fetch({
+		query,config
+	})
+	return commStatus[0] as any;
 }
 
 export async function getProfile(){
-	const profile = await sanityClient.fetch(`
+	const query =`
 		*[_type == "profile" && preset == "main"]{
 			name,
 			bio,
@@ -97,37 +101,46 @@ export async function getProfile(){
 			classifications,
 			skills
 		}
-	`)
-	console.log(profile);
-	return profile[0]
+	`
+	const profile:any[] = await nextSanityClient.fetch({
+		query,config
+	})
+	return profile[0] as any
 }
 
 export async function getActiveTalents(){
-	const talents = await sanityClient.fetch(`
+	const query = `
 		*[_type == "talents" && status == "active"]{
 			_id,
 			name,
 			description_short,
 			image
 		}
-	`)
-	return talents;
+	`
+	const talents = await nextSanityClient.fetch({
+		query,config
+	})
+	return talents as any;
 }
 
 
 export async function getInactiveTalents(){
-	const talents = await sanityClient.fetch(`
+	const query = `
 		*[_type == "talents" && status == "inactive"]{
 			_id,
 			name,
 			description_short,
 			image
 		}
-	`)
-	return talents;
+	`
+	const talents = await nextSanityClient.fetch({
+		query,config
+	})
+	return talents as any;
 }
+
 export async function getTalent(id:string){
-	const talents = await sanityClient.fetch(`
+	const query = `
 		*[_type == "talents" && _id == "${id}"]{
 			name,
 			description_full,
@@ -140,15 +153,18 @@ export async function getTalent(id:string){
 			status,
 			image
 		}
-	`)
-	return talents[0];
+	`
+	const talents: any[] = await nextSanityClient.fetch({
+		query,config
+	})
+	return talents[0] as any;
 }
+
 
 const builder = imageUrlBuilder(sanityClient);
 export function getImageUrlFromRef(ref:string){
 	return builder.image(ref)
 }
-
 export function toUpperCase(str:string){
 	const all = str.split('');
 	all[0] = all[0].toUpperCase();

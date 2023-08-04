@@ -6,7 +6,7 @@ import { getExperimentalServices, getExperimentalText } from "@/app/db/sanityUti
 
 const Experimental = async() => {
 	const experimental = await getExperimentalText();
-	const services = await getExperimentalServices();
+	const services:any[] = await getExperimentalServices();
 	return (
 		<div id="container_experimental">
 			<div className="experimental-title-panel">

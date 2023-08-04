@@ -5,7 +5,7 @@ import ServicesNote from "./note/ServicesNote"
 
 
 const DetailsPage = async() => {
-	const servicesList = await getServices();
+	const servicesList:any[] = await getServices();
 	return (
 		<div id="container_detail-page">
 			{servicesList.reverse().map(
