@@ -1,6 +1,6 @@
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from '@sanity/image-url'
-
+export const revalidate = 5;
 export const sanityClient = createClient({
 	projectId:'6kn1yqrj',
 	dataset:'local',
