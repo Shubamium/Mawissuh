@@ -51,7 +51,12 @@ $grey: #4B5D66;
 						font-weight: 400;
 						font-size: 1rem;
 						align-items: center;
-	
+						span{
+							transition: all 250ms ease;
+							&:hover{
+								transform: scaleX(1.05) scaleY(.9);
+							}
+						}
 						&:nth-child(even){
 							background-color: #667C87;
 						}

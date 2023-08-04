@@ -114,6 +114,7 @@ a {
 $sidebarSize:30vw;
 #root-container{
 	transition: margin-left 450ms ease;
+	overflow: hidden;
 }
 #root-container.hidden{
 	margin-left: -27vw;
@@ -124,7 +125,7 @@ main{
 	padding-bottom: 200px;
 	margin-left: $sidebarSize;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 // Animation

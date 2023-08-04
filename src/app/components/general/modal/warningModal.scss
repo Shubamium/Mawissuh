@@ -98,3 +98,20 @@
 		}
 	}
 }
+
+@media screen and (max-height:600px) {
+	.warning-modal-panel{
+		margin-top: 1em;
+		transform-origin: top;
+		overflow-y: scroll;
+		max-height: 100vh;
+		scale: .9;
+	}	
+} 
+
+@media screen and (max-width:800px){
+	.warning-modal-panel{
+		width: min(100%,800px);
+
+	}
+}
