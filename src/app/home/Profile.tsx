@@ -23,8 +23,8 @@ const Profile = async() => {
 		let totalExp = level * 2400;
 		const exp = year - level;
 		const currentExp = Math.floor(totalExp * exp)
-		const percentage = ((currentExp / totalExp) * 1000/10).toFixed(3)
-		return {exp:currentExp,level:level,totalExp,percentage };
+		const percentage = ((currentExp / totalExp) * 1000/10).toFixed(1);
+		return {exp:currentExp,level:level,totalExp,percentage};
 	}
 
 	const levelData = calculateExp()
