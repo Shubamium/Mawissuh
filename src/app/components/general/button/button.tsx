@@ -1,3 +1,4 @@
+'use client'
 import './button.scss'
 type Props = {
 	children: React.ReactNode,

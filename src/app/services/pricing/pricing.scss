@@ -10,10 +10,11 @@ $grey: #4B5D66;
 		color: white;
 		font-size: 2rem;
 		padding: .2em 4em;
-		border-radius: 1em 1em 0 0;
+		border-radius: .5em .5em 0 0;
 		text-align: center;
 		font-weight: 400;
 		margin-top: .5em;
+		text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.212);
 	}
 	.pricing-panel{
 		width: fit-content;
@@ -32,9 +33,10 @@ $grey: #4B5D66;
 			.pricing-include{
 				align-self: end;
 				border-radius: 1em 1em 1em 0 ;
+				box-shadow: -9px 0px 0px 0px rgba(0, 0, 0, 0.123);
 				.header{
 					background-color: $darkBlue;
-					border-radius: 1em 1em 0 0;
+					border-radius: .7em .7em 0 0;
 					font-weight: 400;
 					display: flex;
 					text-align: center;
@@ -190,7 +192,8 @@ $grey: #4B5D66;
 			}
 			.hire-btn{
 				margin: 0 0 0 auto;
-				background-color: #ffffff;
+				background-color: whitesmoke;
+				opacity: 1;
 				color: #665B4B;
 				font-size: 1.2rem;
 				margin-top: .3em;

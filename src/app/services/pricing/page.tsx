@@ -1,17 +1,17 @@
 
-import Button from '@/app/components/general/button/button'
 import './pricing.scss'
 import { FaArrowRight, FaCheck, FaClipboardCheck, FaPaperPlane } from 'react-icons/fa'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getPricing, getServices } from '@/app/db/sanityUtils'
 import urlSlug from 'url-slug'
+import PricingNote from './client/PricingNote'
 const ServicesPricing = async () => {
 	const general = await getPricing();
 	const servicesList = await getServices()
 	return (
 		<div id='container_pricing'>
-			<h2 className='panel-header'>Pricing</h2>
+			<h2 className='panel-header'>  Pricing</h2>
 			<div className='pricing-panel'>
 				<div className="pricing-info">
 					<div className="pricing-include">
@@ -21,7 +21,7 @@ const ServicesPricing = async () => {
 								return (
 									<Link className='service' key={service._id} href={`/services/details#${urlSlug(service.title)}`} scroll={true}>
 										<span>{service.title ?? 'Talent Creation'}</span>
-										<div className="checkmark">
+										<div className="checkmark shadow-md">
 											<FaCheck/>
 										</div>
 									</Link>
@@ -45,13 +45,9 @@ const ServicesPricing = async () => {
 						<p className='rate'>Fixed Rate-</p>
 						<p className='price'>${general.pricing}<span className="price-base">/month</span></p>
 					</div>
-					<div className="note">
-						<p className='warning'>
-							*Prices are <b>Firm</b>, <b>Non-Negotiable</b> and <br></br> No Hidden / Additional Fees.
-						</p>
-						<Button className='hire-btn'>Hire Me <FaPaperPlane/></Button>
-					</div>
+					<PricingNote/>
 				</div>
+
 			</div>
 		</div>
 	)
