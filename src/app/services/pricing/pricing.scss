@@ -20,6 +20,7 @@ $grey: #4B5D66;
 		max-width: min(80%,1000px);
 		background-color:$blue ;
 		border: 5px solid $darkBlue;
+		box-shadow: 0px 7px 0px 0px #50819B;
 		border-radius: 1em;
 		.pricing-info{
 			display: grid;
@@ -182,6 +183,7 @@ $grey: #4B5D66;
 				height: 100%;
 				padding-top:1em;
 				opacity: .8;
+				padding: 1.2em;
 				b{
 					font-weight: 600;
 				}
