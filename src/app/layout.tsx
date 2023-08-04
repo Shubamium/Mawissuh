@@ -13,6 +13,7 @@ import SpellDecor from './components/general/decor/SpellDecor'
 const title = 'Marimanagement 🐑🪄✨'
 const description = "Greetings! I am Marissa, a dedicated Talent Manager specializing in VTubers and Artists. With my expertise, I can guide you towards achieving remarkable success in your career! Let's embark on this journey together! 🌟"
 const banner = 'https://i.ibb.co/0VmGkMD/mari-banner.png'
+
 export const metadata: Metadata = {
 	title: title,
 	icons:{
