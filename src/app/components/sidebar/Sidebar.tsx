@@ -16,8 +16,8 @@ const Sidebar = () => {
 					<h2>Contacts✧</h2>
 					<div className='sidebar-contacts'>
 						<a href="mailto:SheepishMage@gmail.com" target='_blank'><IoIosMail/></a>
-						<a href="#" target='_blank'><BsTwitter/></a>
-						<a href="#" target='_blank'><BsDiscord/></a>
+						<a href="https://twitter.com/SheepishMage" target='_blank'><BsTwitter/></a>
+						<a href="https://discordapp.com/users/675465527744790560" target='_blank'><BsDiscord/></a>
 					</div>
 					<p className='credits'>website design by <a href="https://twitter.com/Shubamium2" target='_blank'>@shubamium</a></p>
 				</div>

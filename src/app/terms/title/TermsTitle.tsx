@@ -29,9 +29,9 @@ export default function TermsTitle({}: Props) {
 					</p>
 
 					<div className="terms-title-contacts">
-						<a href="#" target='_blank'><RiMailFill/> </a>
-						<a href="#" target='_blank'><FaTwitter/> </a>
-						<a href="#" target='_blank'><FaDiscord/> </a>
+						<a href="mailto:SheepishMage@gmail.com" target='_blank'><RiMailFill/> </a>
+						<a href="https://twitter.com/SheepishMage" target='_blank'><FaTwitter/> </a>
+						<a href="https://discordapp.com/users/675465527744790560" target='_blank'><FaDiscord/> </a>
 					</div>
 				</div>
 			</div>

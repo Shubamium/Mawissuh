@@ -31,9 +31,9 @@ const Profile = async() => {
 						<Image src={getImageUrlFromRef(profile.profile_pic).url() ?? "/static/images/art/chara_profile.png"} alt='mawissuh pfp' className='shadow-solid' width={300} height={300}/>
 					</div>
 					<div className="profile-contacts">
-						<a href="#" target='_blank'><RiMailFill/> </a>
-						<a href="#" target='_blank'><FaTwitter/> </a>
-						<a href="#" target='_blank'><FaDiscord/> </a>
+						<a href="mailto:SheepishMage@gmail.com" target='_blank'><RiMailFill/> </a>
+						<a href="https://twitter.com/SheepishMage" target='_blank'><FaTwitter/> </a>
+						<a href="https://discordapp.com/users/675465527744790560" target='_blank'><FaDiscord/> </a>
 					</div>
 					<div className="profile-stats shadow-solid">
 						<div className="stats-header">
