@@ -1,45 +1,68 @@
-import { createClient } from "@sanity/client";
+import SanityClient from "next-sanity-client";
+import {createClient} from "@sanity/client";
 import imageUrlBuilder from '@sanity/image-url'
-export const revalidate = 5;
+
+export const nextSanityClient = new SanityClient({
+	projectId:'6kn1yqrj',
+	dataset:'local',
+	useCdn: process.env.NODE_ENV === 'production',
+	apiVersion:'2023-05-03'
+})
+
 export const sanityClient = createClient({
 	projectId:'6kn1yqrj',
 	dataset:'local',
-	useCdn:false,
+	useCdn: process.env.NODE_ENV === 'production',
 	apiVersion:'2023-05-03'
 })
 
 
+const config = {
+	next: { revalidate: 5 }
+}
 export async function getServices() {
-	const services = await sanityClient.fetch(`
-		*[_type == "services"] | order(_createdAt desc){
-			_id,
-			title,
-			notes,
-			paragraph,
-			image
-		}
-	`)
+	const services = await nextSanityClient.fetch({
+		query:`
+			*[_type == "services"] | order(_createdAt desc){
+				_id,
+				title,
+				notes,
+				paragraph,
+				image
+			}
+		`,
+		config
+	} 
+	)
 	
 	return services
 }
 export async function getExperimentalServices() {
-	const services = await sanityClient.fetch(`
+	const services:any[] = await nextSanityClient.fetch({
+		query:`
 		*[_type == "experimental_services"] | order(_createdAt asc){
 			_id,
 			title,
 			description
 		}
-	`)
-	
+		`,
+		config
+	})
+	services.forEach((element:{description:string}) => {
+		console.log(element.description);
+	});
 	return services
 }
 
 export async function getExperimentalText(){
-	const experimental = await sanityClient.fetch(`
-		*[_type == "general" && preset == "main"]{
-			text_experimental
-		}
-	`)
+	const experimental:any[] = await nextSanityClient.fetch({
+		query:`
+			*[_type == "general" && preset == "main"]{
+				text_experimental
+			}
+		`,
+		config
+	})
 	return experimental[0]
 }
 
