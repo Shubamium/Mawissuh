@@ -11,7 +11,7 @@ type Props = {
 }
 
 function WarningModal({onClose}: Props) {
-	const [agree,setAgree] = useState(true);
+	const [agree,setAgree] = useState(false);
 	return (
 			<Modal>
 				<div className="warning-modal-panel">

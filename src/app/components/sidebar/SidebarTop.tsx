@@ -9,7 +9,7 @@ type Props = {}
 
 const SidebarTop = (props: Props) => {
 
-	const [warningModal,setWarningModal] = useState(false);
+	const [warningModal,setWarningModal] = useState(true);
 	return (
 		<div className="sidebar-top">
 			<ButtonSidebarHide/>
