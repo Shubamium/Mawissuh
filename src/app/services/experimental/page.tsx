@@ -4,6 +4,7 @@ import ExperimentalCustomPanel from "./panel/ExperimentalCustomPanel"
 import { PortableText } from '@portabletext/react'
 import { getExperimentalServices, getExperimentalText } from "@/app/db/sanityUtils"
 
+const dynamic = 'force-dynamic'
 const Experimental = async() => {
 	const experimental = await getExperimentalText();
 	const services = await getExperimentalServices();

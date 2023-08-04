@@ -6,6 +6,8 @@ import Image from 'next/image'
 import { getPricing, getServices } from '@/app/db/sanityUtils'
 import urlSlug from 'url-slug'
 import PricingNote from './client/PricingNote'
+
+const dynamic = 'force-dynamic'
 const ServicesPricing = async () => {
 	const general = await getPricing();
 	const servicesList = await getServices()
