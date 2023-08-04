@@ -32,6 +32,10 @@
 			max-width: 62ch;
 			font-size: .9rem;
 			color:#9B9695;
+			strong{
+				font-weight: 500;
+				filter: brightness(80%);
+			}
 		}
 
 		.notes{
