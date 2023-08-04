@@ -1,5 +1,6 @@
 .active-talent-panel{
 	background-color:#E5E6E7;
+	background: url('/static/images/pattern/checker.png'),#E5E6E7;
 	width: min-content;
 	$panelBr:1em;
 	border-radius: $panelBr;
@@ -8,27 +9,200 @@
 	justify-content: space-between;
 	flex-direction: column;
 	min-height: 400px;
+	box-shadow:  0px 4px 0px 0px rgba(110, 145, 157, 0.684);
 	.active-talent-panel-body{
 		padding: 4em .9em;
 		padding-top: 1em;
+		--originalDelay: 0ms;
 		.talent-pfp{
 			padding: 2em 3em;
-			img{
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				width: 170px;
+				height: 170px;
+				object-fit: cover;
+				object-position: center;
+				border-radius: 50%;
+				filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.22));
+				z-index: 50;
+				scale: .95;
+				border: 1px solid white;
+			}
+
+			.pfp{
 				display: block;
 				width: 170px;
 				height: 170px;
 				object-fit: cover;
 				object-position: center;
 				border-radius: 50%;
+				filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.22));
+				position: relative;
+				z-index: 20;
+
+				animation: pfp 1s forwards;
+				animation-delay: calc(var(--originalDelay) + 2s);
+				opacity: 0;
 			}
+			.decor_pfp_spell{
+				position: absolute;
+				top: 14%;
+				left: 18%;
+				width: 170px;
+				height: 170px;
+				scale: 2;
+				z-index: 2;
+				animation: pfp-spell 1.7s ease-in-out forwards normal ,speen 120s linear infinite;
+				animation-delay: var(--originalDelay);
+				opacity: 0;
+
+			}
+			.decor_leaf{
+				position: absolute;
+				z-index: 5;
+				left: -4%;
+				top:20%;
+				scale: .8;
+				overflow: visible;
+				animation: leaf 2s forwards;
+				animation-delay: var(--originalDelay);
+				opacity: 0;
+				#left_grey{
+					animation: decor_leaf-l-grey 1.2s ease forwards;
+					animation-delay: calc(var(--originalDelay) + 1s);
+					transform-origin: 60% 100%;
+					opacity: 0;
+				}
+				#left_green{
+					animation: decor_leaf-l-green 1.5s ease forwards;
+					animation-delay: calc(var(--originalDelay) + 1.2s);
+					transform-origin: 60% 100%;
+					opacity: 0;
+				}
+				#right_green{
+					animation: decor_leaf-r-green 1.6s ease forwards;
+					opacity: 0;
+					animation-delay: calc(var(--originalDelay) + 1.5s);
+					transform-origin: 40% 100%;
+				}
+			}
+			.decor_star{
+				position: absolute;
+				animation: pfp-star 1.4s ease forwards normal,speen 50s linear infinite reverse;
+				opacity: 0;
+				animation-delay: calc(var(--originalDelay) + 2.4s);
+				width: 35px;
+				height: 35px;
+				z-index: 50;
+				filter: drop-shadow(0px 0px 4px rgba(86, 145, 255, 0.442));
+				top: 5.8%;
+				left: 43%;
+
+			}
+
+			// Animation
+			@keyframes pfp {
+				from{
+					opacity: 0;
+					scale: 1.1;
+				}
+				to{
+					scale: 1;
+					opacity: 1;
+				}
+			}
+			// Animation
+			@keyframes leaf {
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			@keyframes pfp-spell {
+				from{
+					scale: 0;
+					transform: rotate(0deg);
+				}
+				60%{
+					scale: 2.4;
+					transform: rotate(360deg);
+
+				}
+				to{
+					transform: rotate(10deg);
+					scale: 2;
+					opacity: 1;
+				}
+			}
+			@keyframes pfp-star {
+				from{
+					scale: 0;
+					transform: rotate(0deg);
+				}
+				80%{
+					scale: 1.4;
+				}
+				to{
+					transform: rotate(270deg);
+					scale: 1;
+					opacity: 1;
+				}
+			}
+
+
+			// Leaf Animation
+			@keyframes decor_leaf-l-grey {
+				from{
+					rotate: -20deg;
+					transform: translateY(-500px);
+				}
+				60%{
+					rotate: 10deg;
+				}
+				to{
+					transform: translateY(0);
+					opacity: 1;
+					rotate: 0deg;
+				}
+			}
+			@keyframes decor_leaf-l-green {
+				from{
+					transform: translateY(-300px);
+					rotate: -20deg;
+				}
+				60%{
+					rotate: 10deg;
+				}
+				to{
+					transform: translateY(0);
+					opacity: 1;
+					rotate: 0deg;
+				}
+			}
+			@keyframes decor_leaf-r-green {
+				from{
+					rotate: -60deg;
+				}
+				to{
+					rotate: 0deg;
+					opacity: 1;
+				}
+			}
+
 		}
 		.talent-info{
 			text-align: center;
+
 			.name{
 				color:#7A8581;
 				white-space: nowrap;
 				font-weight: 500;
-				font-size: 1rem;
+				font-size: 1.4rem;
+				margin-top: 1em;
 			}
 			.intro{
 				color: #B2B2B2;

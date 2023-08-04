@@ -17,7 +17,7 @@ const TalentsPage = async() => {
 				</HeaderTitle>
 				<div className="active-talent-lists">
 					{activeTalents.map(
-						(talent:any)=>{
+						(talent:any,index:number)=>{
 							return (
 								<ActiveTalentPanel 
 									key={talent._id}
@@ -25,6 +25,7 @@ const TalentsPage = async() => {
 									name={talent.name}
 									description={talent.description_short} 
 									image={talent.image}
+									delay={index*700}
 								/>
 							)
 						}
