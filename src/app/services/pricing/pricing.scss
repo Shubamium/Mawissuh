@@ -119,6 +119,8 @@ $grey: #4B5D66;
 					user-select: none;
 					position: relative;
 					z-index: 100;
+					user-select: none;
+					pointer-events: none;
 				}
 				&::after{
 					content: '';

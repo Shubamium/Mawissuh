@@ -33,6 +33,8 @@
 				height: 100%;
 				object-fit: contain;
 				scale: 1.4;
+				user-select: none;
+				pointer-events: none;
 			}
 			position: relative;
 			.decor_spell-bg{
@@ -42,6 +44,7 @@
 				left: -95%;
 				top: -110%;
 				scale: .7;
+				pointer-events: none;
 				animation: speen 220s infinite linear;
 			}
 		}
