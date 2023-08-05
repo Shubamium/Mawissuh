@@ -17,7 +17,7 @@ const ActiveTalentPanel = ({name,description,image,id,delay}: Props) => {
 	<div className='active-talent-panel'>
 		<div className="active-talent-panel-body" style={{"--originalDelay":`${delay}ms`} as React.CSSProperties}>
 			<div className="talent-pfp">
-				<Image className='decor_pfp_spell' src="/static/images/decor/magic-circle_glow.png" alt='' width="550" height="550"/>
+				<Image className='decor_pfp_spell' src="/static/images/decor/magic-circle_glow.png" alt='' width="250" height="250"/>
 				<svg className='decor_leaf' width="278" height="207" viewBox="0 0 278 207" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g id="leaf">
 						<path id="right_green" d="M240.283 136.695C212.222 172.859 136.65 167.382 102.372 160.123C111.094 142.575 137.224 108.655 171.964 113.359C206.704 118.062 257.125 83.2313 274.854 62.1994C277.114 73.9817 268.343 100.53 240.283 136.695Z" fill="url(#paint0_linear_31_332)"/>
