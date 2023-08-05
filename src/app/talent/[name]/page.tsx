@@ -50,6 +50,8 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 	}
 	return (
 		<div className='talent-detail-panel'>
+			<Image className='decor_talent_edge decor_talent_edge-l' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
+			<Image className='decor_talent_edge decor_talent_edge-r' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<div className="talent-detail-header">
 				<div className="talent-pfp">
 					<Image className='decor_talent_spell' src="/static/images/decor/magic-circle_normal.png" alt='' width={1050} height={1050}/>

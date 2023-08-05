@@ -15,6 +15,7 @@ type Props = {
 const PastTalentPanel = ({name,description,image,id}: Props) => {
   return (
 	<div className='past-talent-panel'>
+		<Image className='decor_talent_edge' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 		<div className="past-talent-panel-body">
 			<div className="talent-pfp">
 				<Image src={getImageUrlFromRef(image).url() || ''} alt='talent-pfp' width="250" height="250"/>

@@ -1,5 +1,5 @@
 .active-talent-panel{
-	background-color:#E5E6E7;
+	
 	background: url('/static/images/pattern/checker.png'),#E5E6E7;
 	width: min-content;
 	$panelBr:1em;
@@ -27,7 +27,8 @@
 				border-radius: 50%;
 				filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.22));
 				z-index: 50;
-				scale: .95;
+				transform: translateX(-1px);
+				scale: .9;
 				border: 1px solid white;
 			}
 
@@ -41,10 +42,12 @@
 				filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.22));
 				position: relative;
 				z-index: 20;
+				border: 3px solid rgb(150, 253, 255);
 
 				animation: pfp 1s forwards;
 				animation-delay: calc(var(--originalDelay) + 2s);
 				opacity: 0;
+
 			}
 			.decor_pfp_spell{
 				position: absolute;

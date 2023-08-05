@@ -4,7 +4,20 @@
 	width: min(85%,1100px);
 	margin: 0 auto;
 	padding: 2em;
-	border-radius: 2em;
+	border-radius: 1em;
+	position: relative;
+	.decor_talent_edge{
+		position: absolute;
+		top: -2%;
+	}
+	.decor_talent_edge-l{
+		left: -1%;
+	}
+	.decor_talent_edge-r{
+		right: -1%;
+		transform: scaleX(-1);
+	}
+	
 	.talent-detail-header{
 		display: grid;
 		grid-template-columns: 1fr 4fr;
@@ -29,6 +42,7 @@
 				left: -419px;
 				animation: talent-pfp-spell 1.7s ease-in-out forwards normal ,speen 120s linear infinite;
 				opacity: 0;
+				user-select: none;
 			}
 
 			@keyframes pfp {
@@ -141,6 +155,7 @@
 		display: grid;
 		grid-template-columns: 1.7fr 4fr;
 		gap: 1.8em;
+		margin-top: 1em;
 		.talent-detail-sidebar{
 			display: flex;
 			flex-direction: column;
