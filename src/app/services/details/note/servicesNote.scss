@@ -17,7 +17,16 @@
 		b{
 			font-weight: 600;
 		}
+		position: relative;
+		.decor_dialogue{
+			position: absolute;
+			left: 90%;
+			top: 40%;
+			z-index: -2;
+			rotate: 10deg;
+		}
 	}
+	
 	.image-part{
 		position: relative;
 		img{
