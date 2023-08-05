@@ -15,7 +15,8 @@ const PaymentGuideline = (props: Props) => {
 		<div className="payment-panel">
 			<div className="payment-clamp">
 				<div className="img-part">
-					<Image src="/static/images/art/chibis/analyticsTransparent.png" alt="mawissuh chibi" width={400} height={400}/>
+					<div className="decor_bg"></div>
+					<Image src="/static/images/art/chibis/analyticsTransparent.png" alt="mawissuh chibi"  className="chibi" width={400} height={400}/>
 				</div>
 				<div className="guideline-list">
 					<div className="guideline">

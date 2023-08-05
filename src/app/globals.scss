@@ -132,16 +132,16 @@ main{
 
 @keyframes glow {
 	from{
-		filter: drop-shadow(.2vw rgb(10, 255, 255)), invert(100%);
-		opacity: 0.2;
+		// filter: drop-shadow(.2vw rgb(10, 255, 255)), invert(100%);
+		opacity: 0.15;
 	}
-	50%{
-		opacity: 0.5;
-		filter: drop-shadow(2vw rgb(10, 255, 255)),invert(0%);
+	80%{
+		opacity: 0.4;
+		// filter: drop-shadow(2vw rgb(10, 255, 255)),invert(0%);
 	}
 	to{
-		filter: drop-shadow(.2vw rgb(10, 255, 255)), invert(100%);
-		opacity: 0.2;
+		// filter: drop-shadow(.2vw rgb(10, 255, 255)), invert(100%);
+		opacity: 0.15;
 	}
 }
 @keyframes speen {

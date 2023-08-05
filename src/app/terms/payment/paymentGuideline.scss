@@ -22,6 +22,21 @@
 			display: grid;
 			grid-template-columns: 1fr 2fr;
 			gap: 2em;
+			.img-part{
+				position: relative;
+				.decor_bg{
+					width: 100%;
+					height: 100%;
+					background-color: #F4E8E1;
+					border-radius: 50%;
+					position: absolute;
+					scale: .8;
+				}
+				.chibi{
+					position: relative;
+					z-index: 2;
+				}
+			}
 		}
 
 		.guideline-list{
@@ -34,6 +49,10 @@
 				grid-template-columns: 70px 1fr;
 				gap: 1em;
 				align-items: center;
+				transition: all 250ms ease;
+				&:hover{
+					transform: translateX(10px);
+				}
 				.icon{
 					background-color: #8D8382;
 					aspect-ratio: 1/1;

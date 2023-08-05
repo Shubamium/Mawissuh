@@ -7,6 +7,13 @@
 		padding: 2em;
 		margin: .8em 0;
 		color: #8D8382;
+		.left-clamp{
+			img{
+				float: left;
+				width: 70px;
+				height: 70px;
+			}
+		}
 	}
 	.right-container{
 		padding:2em;

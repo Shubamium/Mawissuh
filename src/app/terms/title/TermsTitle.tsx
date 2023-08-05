@@ -13,6 +13,7 @@ export default function TermsTitle({}: Props) {
 		<div className="left-text">
 			<div className="left-container">
 				<div className="left-clamp">
+					<Image src={'/static/images/art/icons/badge/badge_simple.png'} alt='' width={150} height={150}/>
 					<p>By proceeding with my services, you acknowledge that you have read, understood, and <u>agree to be bound</u> by these <b>Terms and Conditions</b>.</p>
 				</div>
 			</div>

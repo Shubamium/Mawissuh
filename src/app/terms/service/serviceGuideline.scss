@@ -28,11 +28,21 @@
 		}
 
 		.img-part{
-			img{
+			.chibi{
 				width: 100%;
 				height: 100%;
 				object-fit: contain;
-				scale: 1.2;
+				scale: 1.4;
+			}
+			position: relative;
+			.decor_spell-bg{
+				position: absolute;
+				width: 750px;
+				height: 750px;
+				left: -95%;
+				top: -110%;
+				scale: .7;
+				animation: speen 220s infinite linear;
 			}
 		}
 	}

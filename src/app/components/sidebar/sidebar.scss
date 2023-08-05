@@ -41,7 +41,7 @@
 				content: '';
 				// transform-origin: center;
 				transform-origin: left;
-				background-color: #d6b195;
+				background-color: #d0ad93;
 				height: 100%;
 				aspect-ratio: 1 / 1;
 				border-radius: 100%;
@@ -50,7 +50,7 @@
 				position: absolute;
 				animation: speen 55s linear infinite;
 				transform: translateX(-50%);
-				border: 5px dashed #B59177;
+				border: .3vw dashed #B59177;
 			}
 			
 			$magicCircleSize:1.8;
@@ -81,6 +81,7 @@
 				animation: glow 3s ease infinite, speen 120s linear infinite reverse, cast 1s ;
 				animation-duration: 3s, 120s, 1s;
 				transform: translateX(-50%);
+				opacity: .6;
 
 			}
 			&:hover::after{

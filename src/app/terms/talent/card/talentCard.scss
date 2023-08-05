@@ -6,6 +6,12 @@
 	padding: 2em;
 	margin: 1em 1em;
 	display: flex;
+
+	transition: all 250ms ease;
+	transform: translateY(0px);
+	&:hover{
+		transform: translateY(-10px);
+	}
 	.text-part{
 		h2{
 			color:#978180;
