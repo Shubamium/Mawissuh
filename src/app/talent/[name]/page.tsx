@@ -52,7 +52,8 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 		<div className='talent-detail-panel'>
 			<div className="talent-detail-header">
 				<div className="talent-pfp">
-					<Image src={getImageUrlFromRef(talent.image).url() ?? "https://marimanagement.carrd.co/assets/images/image03.jpg"} alt='talent-pfp' width={250} height={250}/>
+					<Image className='decor_talent_spell' src="/static/images/decor/magic-circle_normal.png" alt='' width={1050} height={1050}/>
+					<Image className='pfp' src={getImageUrlFromRef(talent.image).url() ?? "https://marimanagement.carrd.co/assets/images/image03.jpg"} alt='talent-pfp' width={250} height={250}/>
 				</div>
 				<div className="talent-info-container">
 					<div className="talent-data">
