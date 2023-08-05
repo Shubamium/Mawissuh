@@ -9,11 +9,17 @@
 	border-radius: 2em;
 	transition: all 250ms ease;
 	animation: pop-up 250ms linear forwards;
+	display: flex;
+	flex-direction: column;
+	max-height: 80vh;
 	.warning-body{
 		background-color:#B59177;
 		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.199);
 		padding: 2em; 
 		font-size: 1.3rem;
+		background:url('/static/images/pattern/seam.png'), #b59177b8;
+		overflow-y:auto;
+		max-height: 50vh;
 		p{
 			text-shadow:-2px -2px 2px solid rgb(36, 34, 34);
 			margin-bottom: 1em;
@@ -103,8 +109,7 @@
 	.warning-modal-panel{
 		margin-top: 1em;
 		transform-origin: top;
-		overflow-y: scroll;
-		max-height: 100vh;
+		// max-height: 100vh;
 		scale: .9;
 	}	
 } 
