@@ -151,6 +151,7 @@ export async function getTalent(id:string){
 			stats,
 			achievements,
 			status,
+			contacts,
 			image
 		}
 	`

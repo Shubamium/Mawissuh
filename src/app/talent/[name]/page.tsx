@@ -6,14 +6,48 @@ import Image from 'next/image'
 import { getImageUrlFromRef, getTalent, toUpperCase } from '@/app/db/sanityUtils'
 import {PortableText} from '@portabletext/react'
 
+import { Fragment } from 'react'
+import { redirect } from 'next/navigation'
+import { RedirectType } from 'next/dist/client/components/redirect'
 type talentDetailPanelProps = {
 	params:{
 		name:string
 	}
 }
+const renderContact = (contact: { type:string,link:string},key:string) =>{
+	switch(contact.type){
+		case 'discord':
+			return (
+				<a href={`${contact.link}`} target='_blank' key={key}><FaDiscord/></a>
+			)
+		case 'email':
+			return (
+				<a href={`mailto:${contact.link}`} target='_blank' key={key}><RiMailFill/></a>
+			)
+		case 'twitch':
+			return (
+				<a href={`${contact.link}`} target='_blank' key={key}><FaTwitch/></a>
+			)
+
+		case 'twitter':
+			return (
+				<a href={`${contact.link}`} target='_blank' key={key}><FaTwitter/></a>
+			)
+		case 'youtube':
+			return (
+				<a href={`${contact.link}`} target='_blank' key={key}><FaYoutube/></a>
+			)
+		default:
+			return <Fragment key={key}></Fragment>
+	}
+}
 const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 	const talentName =  params.name
 	const talent:any = await getTalent(talentName);
+
+	if(!talent){
+		redirect('/talents',RedirectType.replace)
+	}
 	return (
 		<div className='talent-detail-panel'>
 			<div className="talent-detail-header">
@@ -31,13 +65,15 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 						</div>
 					</div>
 					<div className="side-container">
-						<div className="talent-contact">
-							<a href="#"><FaTwitch/></a>
-							<a href="#"><FaTwitter/></a>
-							<a href="#"><RiMailFill/></a>
-							<a href="#"><FaDiscord/></a>
-							<a href="#"><FaYoutube/></a>
-						</div>
+						{
+							talent.contacts && (
+								<div className="talent-contact">
+									{talent.contacts.map((contact:any,index:number)=>{
+										return renderContact(contact,`talent-contact-${index}`);
+									})}
+								</div>
+							)
+						}
 						<div className="talent-status">
 							<p>{toUpperCase(talent.status)}</p>
 						</div>
