@@ -32,6 +32,11 @@
 		margin-top: .2em;
 		h2{
 			font-weight: 400;
+			background: linear-gradient(59deg, #65A5C0 0%, #67ff9c 30%, rgb(111, 219, 255) 48.96%,#3f6cff 68.96%, rgb(139, 255, 228) 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-shadow: 0px 4px 8px #b1e4ff89;
 		}
 	}
 	.contract-footer{
@@ -72,8 +77,8 @@
 		overflow-y:auto;
 		max-height: 80vh;
 		padding-bottom: 3em;
-		background-color: #B59177;
 		animation:  scroll-reveal 2s ease;
+		background: url('/static/images/pattern/paper.png'),#B59177;
 		
 		.image-part{
 			padding: 2em;
@@ -114,7 +119,7 @@
 			padding: 0 .3em;
 			line-height: 10px;
 
-			background: linear-gradient(4deg, #ffffff 0%, rgb(148, 255, 228) 100%);
+			background: linear-gradient(120deg, #ffffff -20%,#ffffff 30%, rgb(205, 255, 242) 100%);
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
