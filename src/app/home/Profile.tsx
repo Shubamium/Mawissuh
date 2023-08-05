@@ -31,9 +31,13 @@ const Profile = async() => {
 	return (
 		<div className='container_profile shadow-md'>
 			<div className="main-section">
+				<Image className='decor_star-r' src={'/static/images/decor/star_gold.svg'} alt='' width={250} height={250}/>
+				<Image className='decor_star-l' src={'/static/images/decor/star_gold.svg'} alt='' width={250} height={250}/>
+				<Image className='decor_profile-panel-spell' src={'/static/images/decor/magic_circle_animated.gif'} alt='' width={550} height={550}/>
 				<div className="profile-sidebar-container">
-					<div className='profile-pic '>
-						<Image src={getImageUrlFromRef(profile.profile_pic).url() ?? "/static/images/art/chara_profile.png"} alt='mawissuh pfp' className='shadow-solid' width={300} height={300}/>
+					<div className='profile-pic'>
+						<Image  src={getImageUrlFromRef(profile.profile_pic).url() ?? "/static/images/art/chara_profile.png"} alt='mawissuh pfp' className='pfp shadow-solid' width={300} height={300}/>
+						<Image className='decor_profile-badge' src={'/static/images/art/icons/badge/badge_bg.png'} alt='' width={50} height={50}/>
 					</div>
 					<div className="profile-contacts">
 						<a href="mailto:SheepishMage@gmail.com" target='_blank'><RiMailFill/> </a>
@@ -66,6 +70,7 @@ const Profile = async() => {
 							<div className="identity shadow-solid">
 								<h2 className='pfp-name'>{profile.name ?? 'Marissa🐑🪄'}</h2>
 								<p className='sub'>{profile.tagline}</p>
+								
 							</div>
 							<div className="stat">
 								<h2 className='level shadow-solid'><span>Lv.</span>{levelData.level}</h2>

@@ -6,6 +6,35 @@
 	border: 3px solid #A59791;
 	padding: 2em;
 	border-radius: 1em;
+
+	position: relative;
+	.decor_star-r{
+		position: absolute;
+		width: 85px;
+		height: 85px;
+		animation: speen 25s infinite linear reverse;  
+		z-index: -10;
+		top:-3%;
+		left: -4%;
+	}
+	.decor_star-l{
+		position: absolute;
+		width: 85px;
+		height: 85px;
+		z-index: -10;
+		top: -3%;
+		right: -4%;
+		animation: speen 25s infinite linear;
+	}
+	.decor_profile-panel-spell{
+		position: absolute;
+		opacity: .2;
+		
+		top: -10%;
+		left: 50%;
+		z-index: -2;
+		transform: translate(-50%);
+	}
 	.main-section{
 		display: grid;
 		grid-template-columns: 1.3fr 3fr;
@@ -16,12 +45,18 @@
 			flex-direction: column;
 			gap: .5em;
 			.profile-pic{
-				img{
+				.pfp{
 					width: 100%;
 					border: 5px solid white;
 					border-radius: .2em;
 					height: 300px;
 					object-fit: cover;
+				}
+				position: relative;
+				.decor_profile-badge{
+					position: absolute;
+					bottom: -5%;
+					right: 5%;
 				}
 			}
 			.profile-contacts{
@@ -204,7 +239,7 @@
 					gap: 1em;
 					.icon{
 						filter: invert(1) brightness(70%) sepia(100%) saturate(100%) hue-rotate(180deg);
-						img{
+						& > img{
 							max-width: 100%;
 							max-height: 80px;
 							object-fit: contain;
