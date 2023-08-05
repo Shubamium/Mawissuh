@@ -10,6 +10,32 @@
 	flex-direction: column;
 	// gap: 2em;
 	// min-height: 400px;
+	position: relative;
+	&::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: #EACBB4;
+		z-index: -1;
+		transform: rotate(0deg);
+		border-radius: $panelBr;
+		position: absolute;
+
+		animation: past-talent-before 1s ease forwards;
+		animation-delay: 2s;
+
+	}
+	@keyframes past-talent-before {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-6deg);
+			scale: .95;
+		}
+	}
+
+
 	.past-talent-panel-body{
 		// padding: 4em .9em;
 		// padding-top: 1em;
@@ -24,6 +50,7 @@
 				object-fit: cover;
 				object-position: center;
 				border-radius: 50%;
+				
 			}
 		}
 		.talent-info{
