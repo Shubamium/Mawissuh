@@ -160,7 +160,20 @@ export async function getTalent(id:string){
 	})
 	return talents[0] as any;
 }
-
+export async function getTermsTalent(){
+	const query = `
+		*[_type == "terms_talent"]{
+			_id,
+			title,
+			description,
+			image
+		}
+	`
+	const talents = await nextSanityClient.fetch({
+		query,config
+	})
+	return talents as any;
+}
 
 const builder = imageUrlBuilder(sanityClient);
 export function getImageUrlFromRef(ref:string){
