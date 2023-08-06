@@ -3,11 +3,13 @@ import Image from 'next/image'
 import './homeTitle.scss'
 import { getCommissionStatus } from '@/app/db/sanityUtils'
 import { PortableText } from '@portabletext/react'
+import { FaArrowCircleDown, FaArrowDown } from 'react-icons/fa'
 
 const HomeTitle = async() => {
 	const status:any = await getCommissionStatus();
 	return (
-		<div id="container_home-title">
+		<>
+			<div id="container_home-title">
 			<div className="decor_star">
 				<svg className='stars_l' width="191" height="187" viewBox="0 0 191 187" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g id="stars_l">
@@ -37,7 +39,14 @@ const HomeTitle = async() => {
 					value={status.text_commission}
 				/>
 			</div>
+
+		
 		</div>
+			<a href="#profile" className='profile-sign shadow-solid'>
+					<p>Profile</p>
+					<FaArrowDown/>
+			</a>
+		</>
 	)
 }
 

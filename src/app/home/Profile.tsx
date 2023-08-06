@@ -29,7 +29,7 @@ const Profile = async() => {
 
 	const levelData = calculateExp()
 	return (
-		<div className='container_profile shadow-md'>
+		<div className='container_profile shadow-md' id='profile'>
 			<div className="main-section">
 				<Image className='decor_star-r' src={'/static/images/decor/star_gold.svg'} alt='' width={250} height={250}/>
 				<Image className='decor_star-l' src={'/static/images/decor/star_gold.svg'} alt='' width={250} height={250}/>
