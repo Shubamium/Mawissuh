@@ -31,7 +31,7 @@ const ContractModal = ({onclose}: Props) => {
 					</div>
 					<div className="contract-body">
 						<div className="image-part">
-							<Image className='spell' src="/static/images/art/decor/magic_circles_2.png" alt="" width={850} height={850}/>
+							<Image className='spell' src="/static/images/art/decor/magic-circles_2.png" alt="" width={850} height={850}/>
 							<Image className='badge' src="/static/images/art/icons/badge/badge_white.png" alt="" width={450} height={450}/>
 						</div>
 						<p>I will assist you in your content creation, handle your scheduling, organize collabs, provide you support and ensure all your needs and goals are met! </p>
