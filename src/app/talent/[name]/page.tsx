@@ -1,4 +1,4 @@
-import { FaDiscord, FaTrophy, FaTwitch, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaDiscord, FaLink, FaTiktok, FaTrophy, FaTwitch, FaTwitter, FaYoutube } from 'react-icons/fa'
 import './talentDetailPanel.scss'
 import { RiMailFill } from 'react-icons/ri'
 import DiamondStats from '@/app/components/general/stats/DiamondStats'
@@ -38,6 +38,15 @@ const renderContact = (contact: { type:string,link:string},key:string) =>{
 			return (
 				<a href={`${contact.link}`} target='_blank' key={key}><FaYoutube/></a>
 			)
+		case 'website':
+			return (
+				<a href={`${contact.link}`} target='_blank' key={key}><FaLink/></a>
+			)
+		case 'tiktok':
+			return (
+				<a href={`${contact.link}`} target='_blank' key={key}><FaTiktok/></a>
+			)
+		
 		default:
 			return <Fragment key={key}></Fragment>
 	}
