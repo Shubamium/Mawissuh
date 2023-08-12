@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import './talentCard.scss'
 import React from 'react'
+import { getImageUrlFromRef } from '@/app/db/sanityUtils'
 
 type Props ={
 	title: string,
@@ -16,7 +17,7 @@ const TalentCard = (props: Props) => {
 			{props.children}
 		</div>
 		<div className="img-part">
-			<Image src={props.image} alt='mawissuh chibi' width={450} height={450}/>
+			{props.image && <Image src={getImageUrlFromRef(props.image).url()} alt='mawissuh chibi' width={450} height={450}/>}
 		</div>
 	</div>
   )

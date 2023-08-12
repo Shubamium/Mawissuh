@@ -2,7 +2,7 @@ import React from 'react'
 import { FaHandshake } from 'react-icons/fa'
 import './talentAcknowledgement.scss'
 import TalentCard from './card/TalentCard'
-import { getImageUrlFromRef, getTermsTalent } from '@/app/db/sanityUtils'
+import { getTermsTalent } from '@/app/db/sanityUtils'
 import { PortableText } from '@portabletext/react'
 type Props = {}
 
@@ -16,7 +16,7 @@ const TalentAcknowledgement = async(props: Props) => {
 		<div className="card-container">
 			{termsAcknowledge && termsAcknowledge.map((terms:any,index:number)=>{
 				return(
-					<TalentCard title={terms.title} image={getImageUrlFromRef(terms.image).url()} key={terms._id} >
+					<TalentCard title={terms.title} image={terms.image} key={terms._id} >
 						<PortableText
 							value={terms.description}
 						/>
