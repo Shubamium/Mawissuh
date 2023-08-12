@@ -9,6 +9,7 @@ import {PortableText} from '@portabletext/react'
 import { Fragment } from 'react'
 import { redirect } from 'next/navigation'
 import { RedirectType } from 'next/dist/client/components/redirect'
+
 type talentDetailPanelProps = {
 	params:{
 		name:string
@@ -95,18 +96,32 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 							<p>{talent.traits}</p>
 						</div>
 					</div>
-					<div className="talent-detail-sidebar-panel stats">
-						{
-							talent.stats && talent.stats.map((stat:any,index:number)=>{
-								return (
-									<div className="stat-fields" key={'talent-detail-stats-'+index}>
-										<h2>{stat.label}:</h2>
-										<DiamondStats star={stat.rating} range={6}/>
-									</div>
-								)
-							})
-						}
-					</div>		
+					{talent.custom_stats && talent.custom_stat && talent.custom_stat.length > 0 && (
+						talent.custom_stat.map((customStat:any,index:number)=>{
+							return (
+								<div className="talent-detail-sidebar-panel" key={'custom-stat'+index}>
+									<h2>{customStat.title}:</h2>
+									<PortableText
+										value={customStat.description}
+									/>
+								</div>
+							)
+						})
+					)}
+					{talent.stats && (
+						<div className="talent-detail-sidebar-panel stats">
+							{
+								talent.stats.map((stat:any,index:number)=>{
+									return (
+										<div className="stat-fields" key={'talent-detail-stats-'+index}>
+											<h2>{stat.label}:</h2>
+											<DiamondStats star={stat.rating} range={6}/>
+										</div>
+									)
+								})
+							}
+						</div>		
+					)}
 					
 				</div>
 				<div className="talent-detail-main">

@@ -149,6 +149,8 @@ export async function getTalent(id:string){
 			testimonials,
 			traits,
 			stats,
+			custom_stats,
+			custom_stat,
 			achievements,
 			status,
 			contacts,
