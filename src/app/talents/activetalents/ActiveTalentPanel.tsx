@@ -37,10 +37,10 @@ const ActiveTalentPanel = ({name,description,image,id,delay}: Props) => {
 	<div className='active-talent-panel'>
 		<div className="active-talent-panel-body" style={{"--originalDelay":`${delay}ms`} as React.CSSProperties}>
 			<div className="talent-pfp">
-				<Image className='decor_pfp_spell' src="/static/images/decor/magic-circle_glow.png" alt='' width="250" height="250"/>
+				<Image className='decor_pfp_spell ignore-mouse' src="/static/images/decor/magic-circle_glow.png" alt='' width="250" height="250"/>
 				{decorLeaf}
 				<Image className='pfp' src={getImageUrlFromRef(image).url() || ''} alt='talent-pfp' width="250" height="250"/>
-				<Image className='decor_star' src="/static/images/decor/star_center.png" alt=''  width="250" height="250"/>
+				<Image className='decor_star ignore-mouse' src="/static/images/decor/star_center.png" alt=''  width="250" height="250"/>
 			</div>
 			<div className='talent-info'>
 				<h2 className='name'>{name ?? 'Talent Name'}</h2>
