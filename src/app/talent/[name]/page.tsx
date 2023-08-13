@@ -6,11 +6,12 @@ import Image from 'next/image'
 import { getImageUrlFromRef, getTalent, toUpperCase } from '@/app/db/sanityUtils'
 import {PortableText} from '@portabletext/react'
 
-import { Fragment } from 'react'
+import { CSSProperties, Fragment } from 'react'
 import { redirect } from 'next/navigation'
 import { RedirectType } from 'next/dist/client/components/redirect'
 import YoutubeVideo from './youtubeVideo/YoutubeVideo'
-
+import { CssVariable } from 'next/dist/compiled/@next/font'
+import Color from 'color'
 type talentDetailPanelProps = {
 	params:{
 		name:string
@@ -52,6 +53,32 @@ const renderContact = (contact: { type:string,link:string},key:string) =>{
 			return <Fragment key={key}></Fragment>
 	}
 }
+
+interface extraColors extends CSSProperties{
+	'--primaryColor':CssVariable
+	'--secondaryColor':CssVariable
+	'--darkerPrimary':CssVariable
+	'--lighterPrimary':CssVariable
+}
+const setColorVariableFromColorOptions = (color:colorScheme)=>{
+	if(!color.primary){
+		color.primary = '#EDC7AC'
+	}
+	if(!color.secondary){
+		color.secondary = '#FFE898'
+	}
+	return {
+		'--primaryColor':color.primary,
+		'--secondaryColor':color.secondary,
+		'--darkerPrimary':Color(color.primary).darken(0.55).rotate(-5).desaturate(0.7).hex(),
+		'--lighterPrimary':Color(color.primary).darken(0.05).saturate(0.4).rotate(-5).hex()
+	} as extraColors
+}
+
+type colorScheme = {
+	primary:string,
+	secondary:string
+}
 const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 	const talentName =  params.name
 	const talent:any = await getTalent(talentName);
@@ -59,8 +86,52 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 	if(!talent){
 		redirect('/talents',RedirectType.replace)
 	}
+	console.log(talent.color_scheme)
+	const createColorsOptions = (colorSchemes:string,colorOptions:{primary:string | undefined,secondary:string | undefined} | null = null) =>{
+		if(colorSchemes === 'default') return {};
+		const sampleColorSchemes:{[key:string]:colorScheme} = {
+			'red':{
+				primary:'#ff8e8e',
+				secondary:'#fe6a50'
+			},
+			'default':{
+				primary:'#fabc90',
+				secondary:'#FFE898'
+			},
+			'gold':{
+				primary:'#ffe59e',
+				secondary:'#fff0ca'
+			},
+			'blue':{
+				primary:'#818eff',
+				secondary:'#7cc7f2'
+			},
+			'cyan':{
+				primary:'#96C3DB',
+				secondary:'#F4E8E1'
+			},
+			'purple':{
+				primary:'#fdb9f2',
+				secondary:'#f09fb8'
+			},
+			'pink':{
+				primary:'#ffc0b9',
+				secondary:'#f2807c'
+			},
+			'green':{
+				primary:'#9ddaa6',
+				secondary:'#d2ff98'
+			},
+			'custom':{
+				primary:colorOptions && colorOptions.primary  ? colorOptions.primary : '#EDC7AC',
+				secondary:colorOptions && colorOptions.secondary ? colorOptions.secondary : '#FFE898'
+			}
+			
+		}
+		return setColorVariableFromColorOptions(sampleColorSchemes[colorSchemes ?? 'default'] as colorScheme)
+	}
 	return (
-		<div className='talent-detail-panel'>
+		<div className='talent-detail-panel' style={createColorsOptions(talent.color_schemes)}>
 			<Image className='decor_talent_edge decor_talent_edge-l' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<Image className='decor_talent_edge decor_talent_edge-r' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<div className="talent-detail-header">

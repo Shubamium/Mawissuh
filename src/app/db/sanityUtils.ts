@@ -155,7 +155,9 @@ export async function getTalent(id:string){
 			status,
 			contacts,
 			image,
-			video
+			video,
+			color_schemes,
+			color_scheme
 		}
 	`
 	const talents: any[] = await nextSanityClient.fetch({

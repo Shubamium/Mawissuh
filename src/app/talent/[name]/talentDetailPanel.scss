@@ -1,6 +1,12 @@
 .talent-detail-panel{
-	background-color: #EDC7AC;
-	border:4px solid #584C4B;
+	--primaryColor:#EDC7AC;
+	--secondaryColor: #FFE898;
+
+	--darkerPrimary: #584C4B;
+	--lighterPrimary:#FFAE72;
+	background-color: var(--primaryColor);
+	border: 4px solid var(--darkerPrimary);
+
 	width: min(85%,1100px);
 	margin: 0 auto;
 	padding: 2em;
@@ -85,19 +91,19 @@
 				flex-direction: column;
 				.talent-title{
 					h2{
-						color:#584C4B;
+						color:var(--darkerPrimary);
 						font-weight: 500;
 						font-size: 2.5rem;
 					}
 					.handle{
-						color:#8C7C6F;
+						color:#32323276;
 						font-size: 1.4rem;
 					}
 				}
 				.talent-testimonials{
-					background-color: #584C4B;
+					background-color: var(--darkerPrimary);
 					margin-block: 1em;
-					color: #FFAE72;
+					color: var(--lighterPrimary);
 					padding: .6em;
 					flex-basis: 1;
 				}
@@ -108,8 +114,8 @@
 				flex-direction: column;
 				gap: 1.5em;
 				.talent-contact{
-					background-color: #FFE898;
-					color: #584C4B;
+					background-color: var(--secondaryColor);
+					color: var(--darkerPrimary);
 					display: flex;
 					justify-content: center ;
 					align-items: center;
@@ -127,7 +133,7 @@
 						
 					}
 					a:hover{
-						color: #FFAE72;
+						color: var(--lighterPrimary);
 						scale: 1.2;
 						svg{
 							top: -2px;
@@ -135,9 +141,8 @@
 					}
 				}
 				.talent-status{
-					background-color: #584C4B;
+					background-color: var(--darkerPrimary);
 					font-size: 2rem;
-					// height: 100%;
 					padding: .2em;
 					display: flex;
 					align-items: center;
@@ -169,7 +174,7 @@
 				flex-direction: column;
 			}
 			.talent-detail-sidebar-panel{
-				background-color: #584C4B;
+				background-color: var(--darkerPrimary);
 				padding: .6em;
 				border-radius: .4em;
 				transition: all 250ms ease;
@@ -177,12 +182,12 @@
 					scale: 1.05;
 				}
 				h2{
-					color: #FFAE72;
+					color: var(--lighterPrimary);
 					font-size: .9rem;
 					font-weight: 500;
 				}
 				p{
-					color: #FFE898;
+					color: var(--secondaryColor);
 					font-size: 1.2rem;
 					font-weight: bold;
 				}
@@ -203,7 +208,7 @@
 					
 				}
 				.stat-rating{
-					color:#FFE898;
+					color:var(--secondaryColor);
 				}
 
 			}
@@ -211,10 +216,10 @@
 		}
 		.talent-detail-main{
 			.talent-description{
-				color:#6D5F55;
+				color:#464444;
 				border-radius: .5em;
-				border: 3px solid #B48967;
-				background-color: #D1AA8C;
+				border: 2px solid var(--darkerPrimary);
+				background-color: #00000027;
 				padding: 1em;
 				min-height: 140px;
 				margin-bottom: .6em;
@@ -229,9 +234,9 @@
 					grid-template-columns: 30px 5fr;
 					align-items: center;
 					gap: .6em;
-					background-color: #FFE898;
-					border: 2px solid #584C4B;
-					color: #584C4B;
+					background-color: var(--secondaryColor);
+					border: 2px solid var(--darkerPrimary);
+					color: var(--darkerPrimary);
 					border-radius: .4em;
 					padding: .8em;
 					.icon{
