@@ -9,6 +9,7 @@ import {PortableText} from '@portabletext/react'
 import { Fragment } from 'react'
 import { redirect } from 'next/navigation'
 import { RedirectType } from 'next/dist/client/components/redirect'
+import YoutubeVideo from './youtubeVideo/YoutubeVideo'
 
 type talentDetailPanelProps = {
 	params:{
@@ -134,6 +135,11 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 					
 				</div>
 				<div className="talent-detail-main">
+					{talent.video && (
+						<div className="talent-video">
+							<YoutubeVideo videoId={talent.video}/>
+						</div>
+					)}
 					<div className="talent-description">
 						<PortableText
 							value={talent.description_full}

@@ -154,7 +154,8 @@ export async function getTalent(id:string){
 			achievements,
 			status,
 			contacts,
-			image
+			image,
+			video
 		}
 	`
 	const talents: any[] = await nextSanityClient.fetch({
