@@ -8,7 +8,7 @@ const DetailsPage = async() => {
 	const servicesList:any[] = await getServices();
 	return (
 		<div id="container_detail-page">
-			{servicesList.reverse().map(
+			{servicesList && servicesList.reverse().map(
 				(service:any, index:number) => 
 					<ServiceList 
 						key={`serices-list-${service._id}`} 
