@@ -63,6 +63,7 @@ interface extraColors extends CSSProperties{
 const setColorVariableFromColorOptions = (color:colorScheme)=>{
 	if(!color.primary){
 		color.primary = '#EDC7AC'
+		console.log('no primary')
 	}
 	if(!color.secondary){
 		color.secondary = '#FFE898'
@@ -123,15 +124,15 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 				secondary:'#d2ff98'
 			},
 			'custom':{
-				primary:colorOptions && colorOptions.primary  ? colorOptions.primary : '#EDC7AC',
-				secondary:colorOptions && colorOptions.secondary ? colorOptions.secondary : '#FFE898'
+				primary: colorOptions?.primary ?? '#EDC7AC',
+				secondary: colorOptions?.secondary ?? '#FFE898'
 			}
 			
 		}
 		return setColorVariableFromColorOptions(sampleColorSchemes[colorSchemes ?? 'default'] as colorScheme)
 	}
 	return (
-		<div className='talent-detail-panel' style={createColorsOptions(talent.color_schemes)}>
+		<div className='talent-detail-panel' style={createColorsOptions(talent.color_schemes,{primary:talent.color_scheme.primary?.hex,secondary:talent.color_scheme.secondary?.hex})}>
 			<Image className='decor_talent_edge decor_talent_edge-l' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<Image className='decor_talent_edge decor_talent_edge-r' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<div className="talent-detail-header">
