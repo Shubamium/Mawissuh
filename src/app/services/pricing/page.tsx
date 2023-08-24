@@ -19,7 +19,7 @@ const ServicesPricing = async () => {
 					<div className="pricing-include">
 						<h2 className='header'><FaClipboardCheck/> Includes</h2>
 						<div className="service-list">
-							{servicesList.map((service:any)=>{
+							{servicesList?.map((service:any)=>{
 								return (
 									<Link className='service' key={service._id} href={`/services/details#${urlSlug(service.title)}`} scroll={true}>
 										<span>{service.title ?? 'Talent Creation'}</span>

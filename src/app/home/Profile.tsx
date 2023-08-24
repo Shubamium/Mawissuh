@@ -79,7 +79,7 @@ const Profile = async() => {
 							</div>
 						</div>								
 						<div className="classifications">
-								{profile.classifications.map(
+								{profile?.classifications?.map(
 									(classification:any,index:number)=>{
 										return (
 											<div className="classification shadow-solid" key={'classification' + index}>

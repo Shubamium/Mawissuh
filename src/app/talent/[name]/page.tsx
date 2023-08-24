@@ -154,7 +154,7 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 						{
 							talent.contacts && (
 								<div className="talent-contact">
-									{talent.contacts.map((contact:any,index:number)=>{
+									{talent.contacts?.map((contact:any,index:number)=>{
 										return renderContact(contact,`talent-contact-${index}`);
 									})}
 								</div>
@@ -179,7 +179,7 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 						</div>
 					</div>
 					{talent.custom_stats && talent.custom_stat && talent.custom_stat.length > 0 && (
-						talent.custom_stat.map((customStat:any,index:number)=>{
+						talent.custom_stat?.map((customStat:any,index:number)=>{
 							return (
 								<div className="talent-detail-sidebar-panel" key={'custom-stat'+index}>
 									<h2>{customStat.title}:</h2>
@@ -193,7 +193,7 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 					{talent.stats && (
 						<div className="talent-detail-sidebar-panel stats">
 							{
-								talent.stats.map((stat:any,index:number)=>{
+								talent.stats?.map((stat:any,index:number)=>{
 									return (
 										<div className="stat-fields" key={'talent-detail-stats-'+index}>
 											<h2>{stat.label}:</h2>

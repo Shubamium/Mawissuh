@@ -28,7 +28,7 @@ const ServiceList = ({layout,title,paragraph,image,notes} : serviceListProp) => 
 					/>
 				</div>				
 				<div className="notes">
-					{notes.map((note,index)=>{
+					{notes?.map((note,index)=>{
 						return <div className='service-note' key={`service-notes-${index}`} style={{backgroundColor:note.bgColor.hex}}>
 							<p>{note.note}</p>
 						</div>
