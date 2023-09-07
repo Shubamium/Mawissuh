@@ -19,7 +19,7 @@ const Navigation : FC<NavigationProps> = ({otherBadge}) => {
 	return (
 		<nav className='navigation'>
 			<div className="badge">
-			{	!otherBadge ?  <Image src={"/static/images/art/icons/badge/badge_gradient.svg"} alt='' width={350} height={350} className='decor_badge'/> : <Image src={"/static/images/art/icons/badge/badge_standard.png"} alt='' width={200} height={200} className='decor_badge'/>}
+			{	!otherBadge ?  <Image src={"/static/images/art/icons/badge/badge_gradient.svg"} alt='' width={350} height={350} className='decor_badge'/> : <Image src={"/static/images/art/icons/badge/badge_standard.png"} alt='' width={350} height={350} className='decor_badge'/>}
 			</div>
 			<ul className='navigation-links'>
 				<li className={homeClass('/')}>

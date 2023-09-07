@@ -50,7 +50,7 @@ const Sidebar = () => {
 				<ButtonSidebarShow otherDirection={false}/>
 				<ButtonSidebarShow otherDirection={true}/>
 			</header>
-			<header className={`topbar shadow-md ${!showSidebar ? 'show':'hidden'}`}>
+			<header className={`topbar shadow-solid ${!showSidebar ? 'show':'hidden'}`}>
 				<Navigation otherBadge={true}/>
 			</header>
 		</>

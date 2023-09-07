@@ -204,8 +204,9 @@
 	background-color:#CFB099;
 	margin-left: 29vw;
 	position: fixed;
-	z-index: 1000;
+	z-index: 250;
 	width: 100vw;
+	// max-height: 40px;
 	&.hidden{
 		display: none;
 	}
@@ -216,16 +217,17 @@
 		
 		.badge{
 			background-color: #584C4B;
-			scale: 1.3;
+			scale: 1.5;
 			object-fit: contain;
+			position: relative;
+			padding: 1em;
 			display: flex;
 			align-items: center;
-			// max-height: 50px;
 			padding: .25em;
 			// max-width: 50px;
 			.decor_badge{
 				animation: speen 50s infinite linear reverse;
-				margin-top: 0 !important;
+				margin-top: .2em !important;
 				width: 100%;
 				height: 100%;
 				object-fit: contain;
@@ -234,10 +236,36 @@
 		.navigation-links{
 			display: flex;
 			flex-direction: row;
-			align-items: center;
+			align-items: center ;
+			justify-content: center;
+			width: 100%;
+			padding: 0 4em;
 			.link{
 				width: 100%;
+				background-color: #4f443c3e;
+				font-size: .9rem;
+				border-radius: 1em;
 			}
 		}
 	}
+}
+
+
+@media screen and (max-width:768px){
+
+	.topbar{
+		padding: .5em;
+
+		.navigation{
+			.navigation-links{
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				left: 20px;
+				.link{
+					padding: .4em 1em;
+				}
+			}
+		}
+	}
+	
 }
