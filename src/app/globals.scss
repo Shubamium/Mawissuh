@@ -49,7 +49,7 @@ $sidebarSize:30vw;
 
 main{
 	padding-bottom: 200px;
-	margin-left: $sidebarSize;
+	margin-left: calc($sidebarSize - 1vw);
 	position: relative;
 	overflow: hidden;
 }
