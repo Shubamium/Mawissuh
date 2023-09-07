@@ -7,6 +7,12 @@
 	gap: 5vw;
 	z-index: 150;
 	
+	opacity: 1;
+	&.hidden{
+		opacity: 0;
+		display: none;
+		transition: all 250ms ease;
+	}
 	.actions{
 		display: flex;
 		flex-direction: column;
@@ -191,4 +197,47 @@
 		}
 	}
 	
+}
+
+
+.topbar{
+	background-color:#CFB099;
+	margin-left: 29vw;
+	position: fixed;
+	z-index: 1000;
+	width: 100vw;
+	&.hidden{
+		display: none;
+	}
+
+	.navigation{
+		display: flex;
+		padding: .25em;
+		
+		.badge{
+			background-color: #584C4B;
+			scale: 1.3;
+			object-fit: contain;
+			display: flex;
+			align-items: center;
+			// max-height: 50px;
+			padding: .25em;
+			// max-width: 50px;
+			.decor_badge{
+				animation: speen 50s infinite linear reverse;
+				margin-top: 0 !important;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		.navigation-links{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.link{
+				width: 100%;
+			}
+		}
+	}
 }
