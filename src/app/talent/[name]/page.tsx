@@ -132,7 +132,7 @@ const TalentDetailPanel = async({params} : talentDetailPanelProps) => {
 		return setColorVariableFromColorOptions(sampleColorSchemes[colorSchemes ?? 'default'] as colorScheme)
 	}
 	return (
-		<div className='talent-detail-panel' style={createColorsOptions(talent.color_schemes,{primary:talent.color_scheme.primary?.hex,secondary:talent.color_scheme.secondary?.hex})}>
+		<div className='talent-detail-panel' style={createColorsOptions(talent.color_schemes,{primary:talent.color_scheme?.primary?.hex,secondary:talent.color_scheme?.secondary?.hex})}>
 			<Image className='decor_talent_edge decor_talent_edge-l' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<Image className='decor_talent_edge decor_talent_edge-r' src="/static/images/decor/panel_edge.png" alt='' width={80} height={80}/>
 			<div className="talent-detail-header">

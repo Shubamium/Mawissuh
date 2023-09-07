@@ -60,9 +60,9 @@ const Profile = async() => {
 						
 						</div>
 					</div>
-					<div className="profile-sidebar-extra shadow-solid">
+					{/* <div className="profile-sidebar-extra shadow-solid">
 
-					</div>
+					</div> */}
 				</div>
 				<div className="profile-body-container">
 					<div className="profile-body-title">

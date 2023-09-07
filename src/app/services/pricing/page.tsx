@@ -45,7 +45,7 @@ const ServicesPricing = async () => {
 				<div className="pricing-price">
 					<div className="pricing">
 						<p className='rate'>Fixed Rate-</p>
-						<p className='price'>${general.pricing}<span className="price-base">/month</span></p>
+						<p className='price'>${general.pricing}<span className="price-base">USD/month</span></p>
 					</div>
 					<PricingNote/>
 				</div>

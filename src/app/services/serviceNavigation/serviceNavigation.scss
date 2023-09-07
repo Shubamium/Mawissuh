@@ -7,18 +7,25 @@
 	color: #A2A089;
 	
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
+	justify-content: center;
 	border-radius: 2em;
 	border-bottom: 3px solid #b3bb84;
 	.service-navigation-link{
-		padding: .6em 2em;
+		padding: .6em 0em;
 		border-radius: 2em;
 		transition: all 250ms ease;
-		min-width: 200px;
+		min-width: 180px;
 		&.active{
 			background-color: #5D9ABA;
 			color: white;
 		}
+
+		&:last-of-type{
+			min-width: 220px;
+		}
+
+	
 
 		&:not(.active):hover{
 			scale: 1.2 1;

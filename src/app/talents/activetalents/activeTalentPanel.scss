@@ -130,12 +130,14 @@
 		overflow: hidden;
 		text-align: right;
 		vertical-align: center;
+		// font-size: 1rem;
 		a{
+			padding: 1.2em;
 			background-color: #A4C1BD;
 			color: white;
 			padding: .6em .7em;
-			padding-bottom: .8em;
-			font-size: .7rem;
+			padding-bottom: .5em;
+			font-size: .9rem;
 			width: 100%;
 			display: block;
 			font-weight: 600;

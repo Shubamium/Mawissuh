@@ -144,7 +144,8 @@
 						font-weight: 500;
 						background-color: #7C95A3;
 						width: min-content;
-						padding: 0.41em;
+						min-width: 80%;
+						padding: 0.31em .7em;
 						h2{
 							
 							white-space: nowrap;
@@ -199,13 +200,13 @@
 					margin: 1em 0;
 					.classification{
 						border-radius: .3em;
-						padding: .5em;
+						padding: .5em 1em;
 						color: #586361;
 						background-color:#DCE2B9;
 						transition: all 250ms ease;
 						transform-origin: left;
 						&:hover{
-							scale: 1.08;
+							// scale: 1.08;
 						}
 					}
 

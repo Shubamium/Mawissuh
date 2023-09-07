@@ -1,17 +1,28 @@
 'use client'
 import { SidebarCollapseContext } from '@/app/context/SidebarContext'
-import React , { useContext }from 'react'
+import React , { FC, useContext }from 'react'
 import Button from '../../general/button/button'
-import {BsArrowRight} from 'react-icons/bs'
-const ButtonSidebarShow = () => {
+import {BsArrowLeft, BsArrowRight} from 'react-icons/bs'
+
+
+type ButtonSidebarProps = {
+	otherDirection:boolean;
+}
+const ButtonSidebarShow : FC<ButtonSidebarProps> = ({otherDirection}) => {
 	const sidebarContext = useContext(SidebarCollapseContext)
+	if(sidebarContext.state !== otherDirection) return;
 	return (
 		<Button 
-		 	className='sidebar-button_show shadow-center'
+		 	className={'sidebar-button_show shadow-center' + ` ${otherDirection ?'other' : ''}`}
 		 	onClick={()=>{
-				sidebarContext.setState(state => !state)
+				if(otherDirection){
+					sidebarContext.setState(state => false)
+				}else{
+					
+					sidebarContext.setState(state => true)
+				}
 			}}>
-				<BsArrowRight />
+				{!otherDirection ? <BsArrowRight /> : <BsArrowLeft />} 
 		</Button>
 	)
 }

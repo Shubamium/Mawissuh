@@ -5,9 +5,10 @@
 	border-radius: 0;
 	padding: .5em;
 	margin: 2em .5em;
-	margin-left: 0;
+	margin-left: 1.2em;
+	padding: .5em 2em;
 	&:hover{
 		padding: .5em 4em;
-		scale: 1;
+		// scale: 1;
 	}
 }
