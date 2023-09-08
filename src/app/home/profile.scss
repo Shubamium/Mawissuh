@@ -389,11 +389,14 @@
 						flex-wrap: wrap;
 						justify-content: center;
 						gap: 1em;
-						padding: 1em;
+						// padding: 1em;
 						
 						.level{
-							flex: 1;
-							margin: .25em;
+							flex: 3;
+							padding: .25em;
+						}
+						.exp{
+							flex:1;
 						}
 					}
 				}
@@ -401,6 +404,9 @@
 		}
 
 			.classifications{
+				justify-content: center;
+				margin: 0 !important;
+				margin-bottom: 1em !important;
 			}
 			.profile-body-container .profile-body-bio p, .profile-body-container .profile-body-bio span{
 				font-size: 1rem;
@@ -503,4 +509,17 @@
 
 	
 
+}
+
+@media screen and (max-width:400px){
+	.container_profile{
+		padding: .5em;
+	}
+
+	.container_profile .achievement-section{
+		padding: .5em;
+	}
+	.container_profile .achievement-section .achievement-header h2{
+		font-size: 1.5rem;
+	}
 }

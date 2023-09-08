@@ -187,30 +187,32 @@
 
 @media screen and (max-width:481px) {
 	#container_home-title{
-		padding-top: 120px;
-		 .main-logo{
+		padding-top: 200px;
+		width: 95%;
+		margin-bottom: 100px;
+		.main-logo{
 			width: 100%;
 			max-height: 80px;
-		 }
-		 .decor_star{
+		}
+		.decor_star{
 			opacity: 0;
-		 }
+		}
 
-		 .title{
+		.title{
 			font-size: .8rem;
-		 }
-		 .tagline{
+		}
+		.tagline{
 			font-size: .7rem;
 			white-space: normal;
-		 }
-		 .management-status{
+		}
+		.management-status{
 			font-size: .6rem;
-		 }
+		}
 	}
 	.profile-sign{
 		display: none;
 	}
-	
+
 }
 
 
