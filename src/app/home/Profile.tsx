@@ -74,8 +74,10 @@ const Profile = async() => {
 							</div>
 							<div className="stat">
 								<h2 className='level shadow-solid'><span>Lv.</span>{levelData.level}</h2>
-								<p className='exp'><span className='current'>{levelData.exp}</span> / {levelData.totalExp}EXP </p>
-								<p className='exp'> {levelData.percentage}% </p>
+								<div className="exp-container">
+									<p className='exp'><span className='current'>{levelData.exp}</span> / {levelData.totalExp}EXP </p>
+									<p className='exp'> {levelData.percentage}% </p>
+								</div>
 							</div>
 						</div>								
 						<div className="classifications">
@@ -107,7 +109,7 @@ const Profile = async() => {
 						<div className="section-right"></div>
 					</div>
 
-					<div className="profile-body-skills shadow-md">
+					<div className="profile-body-skills shadow-md inside">
 
 						{profile.skills && profile.skills.map((skill:any, index:number)=>{
 							return (
@@ -128,6 +130,25 @@ const Profile = async() => {
 					</div>
 				</div>
 			</div>
+			<div className="profile-body-skills shadow-md outside">
+
+						{profile.skills && profile.skills.map((skill:any, index:number)=>{
+							return (
+								<div className="skill" key={'profile-skills'+ index}>
+									<div className="icon ">
+										<Image src={getImageUrlFromRef(skill.icon).url() ?? '/static/images/art/icons/skill/skill_placeholder.png'} alt='skill icon' width={150} height={150} className='shadow-solid'/>
+									</div>
+									<div className="skill-info shadow-solid">
+										<div className="skill-header">
+											<h2>{skill.title || 'Skill Title'}</h2>
+											<p className='tier'>Tier {skill.tier || '4'}</p>
+										</div>
+										<p>{skill.text || 'Skill description and its effects'}</p>
+									</div>
+								</div>
+							)
+						})}
+					</div>
 			<div className="achievement-section shadow-md">
 				<div className="achievement-header">
 					<h2>Achievements</h2>

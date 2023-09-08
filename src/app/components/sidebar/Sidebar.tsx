@@ -13,21 +13,21 @@ import { SidebarCollapseContext } from '@/app/context/SidebarContext';
 const Sidebar = () => {
 	const [showSidebar,setShowSidebar] = useState(true);
 	const {setState} = useContext(SidebarCollapseContext);
-	useEffect(()=>{
-		const setSidebar = ()=>{
-			if(window.innerWidth < 1280){
-				setShowSidebar(false)
-				setState(false)
-			}else{
-				setShowSidebar(true)
-			}
+	const setSidebar = ()=>{
+		if(window.innerWidth < 1280){
+			setShowSidebar(false)
+			setState(false)
+		}else{
+			setShowSidebar(true)
 		}
+	}
+	useEffect(()=>{
 		window.addEventListener('resize',(e)=>{
 			setSidebar()
 		})
 		setSidebar()
 		
-	},[setState])
+	},[])
 	return (
 		<>
 			<header className={"sidebar " + `${ showSidebar ? '' : 'hidden'}`}>
