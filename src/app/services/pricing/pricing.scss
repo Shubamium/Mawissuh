@@ -206,3 +206,61 @@ $grey: #4B5D66;
 	}
 
 }
+@media screen and (max-width:768px) {
+	#container_service-navigation{
+		margin: 0 auto;
+		.service-navigation-link{
+			font-size: 1.2rem;
+			padding: 0.6em 1em;
+			&,&:last-of-type{
+				min-width: 100px;
+			}
+		}
+	}
+
+	#container_pricing{
+		.panel-header{
+			font-size: 1.5rem;
+		}
+		.pricing-panel .pricing-info{
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			.pricing-include{
+				min-width: 70%;
+				align-self: center;
+			}
+			.decor_chibi{
+				align-self: center;
+			}
+		}
+		.pricing-panel .pricing-price{
+			display: flex;
+			align-items:center;
+			flex-direction: column;
+			justify-content: center;
+			.pricing{
+				padding: 0.4em 2em;
+				right: 0;
+			}
+			.note{
+				text-align: center;
+				
+			}
+			.hire-btn{
+				margin: .25em auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:520px) {
+	#container_pricing{
+		.pricing-panel .pricing-price{
+			.pricing{
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
