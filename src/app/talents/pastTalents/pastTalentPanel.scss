@@ -109,3 +109,15 @@
 		
 	}
 }
+
+@media screen and (max-width:480px) {
+	.past-talent-panel .past-talent-panel-body{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding-bottom: 2em;
+		.talent-info{
+			padding-right: 0;
+		}
+	}
+}
