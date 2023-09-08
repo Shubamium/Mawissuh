@@ -262,7 +262,8 @@
 			.navigation-links{
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				left: 20px;
+				left: 13px;
+				position: relative;
 				.link{
 					padding: .4em 1em;
 				}
