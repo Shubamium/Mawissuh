@@ -95,6 +95,8 @@
 			.badge{
 				position: relative;
 				z-index: 1000;
+				filter:drop-shadow(4px 4px 15px rgba(255, 255, 255, 0.549));
+				// filter:drop-shadow(2px 2px 15px white);
 			}
 			img{
 				width: 100%;
@@ -124,6 +126,9 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			text-shadow: 0px 4px 8px #b1e4ffc4;
+			&::placeholder{
+				opacity: .15;
+			}
 		}
 	}
 }
@@ -138,4 +143,49 @@
 		overflow: initial;
 
 	}	
+}
+
+@media screen and (max-width:620px){
+	.contract-modal-panel{
+		width: 80%;
+		.contract-header{
+			font-size: 1rem;
+		}
+	}
+}
+@media screen and (max-width:480px) {
+	.contract-modal-panel{
+		width: 75%;
+		.contract-header{
+			font-size: .8rem;
+		}
+		.contract-body{
+			overflow-x: hidden;
+			font-size: .8rem;
+			padding-inline:1em;
+			.contract-name{
+				font-size: 2rem;
+			}
+		}
+	}
+	.contract-modal-panel .contract-body .image-part .spell{
+		opacity: .2;
+	}
+	.contract-modal-panel .contract-body .image-part{
+		padding: 1em;
+	}
+}
+@media screen and (max-width:400px) {
+	.contract-modal-panel{
+		width: 70%;
+		.contract-header{
+			font-size: .6rem;
+		}
+	}
+	.contract-modal-panel .contract-body .image-part img{
+		width: 70%;
+	}
+	.contract-modal-panel .contract-footer .btn-send{
+		font-size: 1rem;
+	}
 }
