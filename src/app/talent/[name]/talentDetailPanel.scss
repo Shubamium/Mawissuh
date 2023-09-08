@@ -252,3 +252,72 @@
 		}
 	}
 }
+
+
+@media screen and (max-width:1280px) {
+	.btn.btn-talent-back{
+		margin: 1em auto;
+	}
+}
+
+
+@media screen  and (max-width:800px){
+	 .talent-detail-header{
+		align-items: center;
+		.talent-info-container{
+			display: flex !important;
+			flex-direction: column;
+			align-items: stretch;
+		}
+	 }
+}
+
+@media screen and (max-width:768px){
+	.talent-detail-panel .talent-detail-body{
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: stretch;
+	}
+	.talent-detail-panel .talent-detail-body .talent-detail-main .talent-description{
+		font-size: .85rem;
+	}
+}
+
+@media screen and (max-width:620px){
+	.talent-detail-header{
+		display: flex !important;
+		gap: 1em;
+		flex-direction: column;
+		align-items: stretch;
+		
+		.talent-pfp .decor_talent_spell{
+			opacity: 0 !important;
+			.pfp{
+				height: auto;
+				width: 40%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:480px){
+	.talent-detail-panel .talent-detail-header .talent-pfp{
+		.pfp{
+			width: 100%;
+			border-radius: .25em;
+			height: auto;
+		}
+	}
+	.talent-detail-panel .talent-detail-header .talent-info-container .talent-data{
+		.talent-title{
+			text-align: center;
+			h2{
+				font-size: 2rem;
+
+			}
+			.handle{
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
