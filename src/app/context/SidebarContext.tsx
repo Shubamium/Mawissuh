@@ -12,8 +12,7 @@ export const SidebarCollapseContext = createContext<{
 }>({state:false,setState:()=>{}});
 
 const SidebarContextProvider = ({children} : sidebarContextProps) => {
-	const initialState = window.innerWidth <= 1280
-	const sidebarCollapse = useState(initialState)
+	const sidebarCollapse = useState(false)
 	return (
 		<SidebarCollapseContext.Provider value={{state:sidebarCollapse[0],setState:sidebarCollapse[1]}}>
 			{children}
