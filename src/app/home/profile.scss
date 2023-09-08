@@ -388,7 +388,7 @@
 						align-items: center;
 						flex-wrap: wrap;
 						justify-content: center;
-						gap: 1em;
+						gap: .4em;
 						// padding: 1em;
 						
 						.level{
@@ -521,5 +521,12 @@
 	}
 	.container_profile .achievement-section .achievement-header h2{
 		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width:300px) {
+	.container_profile .main-section .profile-body-container .profile-body-title .main-info .stat{
+		padding: 1em;
+		gap: 0;
 	}
 }
