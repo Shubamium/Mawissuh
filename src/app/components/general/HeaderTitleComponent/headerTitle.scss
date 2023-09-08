@@ -34,3 +34,24 @@
 		color: #8D8382;
 	}
 }
+
+@media screen and (max-width:1280px) {
+	.container_header-title {
+		.header-title{
+			padding-top: 170px;
+			padding-bottom: .25em;
+		}
+	}
+}
+@media screen and (max-width:768px) {
+	.container_header-title {
+		padding-bottom: 1.5em;
+		.header-title{
+			padding-top: 170px;
+			font-size: 2.5rem;
+		}
+		.header-description{
+			font-size: .8rem;
+		}
+	}
+}
