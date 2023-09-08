@@ -32,3 +32,34 @@
 		}
 	}
 }
+
+@media screen and (max-width:600px) {
+	#container_service-navigation{
+		margin: 0 auto;
+		.service-navigation-link{
+			font-size: 1.2rem;
+			padding: 0.6em 1em;
+			&,&:last-of-type{
+				min-width: 100px;
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width:400px) {
+	#container_service-navigation{
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		.service-navigation-link{
+			font-size: .9rem;
+			padding: 0.6em 1em;
+			&,&:last-of-type{
+				min-width: 100px;
+			}
+		}
+	}
+	
+}

@@ -71,3 +71,18 @@
 		}
 	}
 }
+@media screen and (max-width:600px) {
+	.services-note{
+		display: flex;
+		flex-direction: column;
+		.decor_dialogue{
+			display: none;
+		}
+		.image-part{
+			&::before,&::after{
+				bottom: -25%;
+				scale: .5;
+			}
+		}
+	}
+}

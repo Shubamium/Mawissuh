@@ -68,3 +68,32 @@
 		}
 	}
 }
+
+@media screen and (max-width:768px) {
+	.service-list-container{
+		.service-layout{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.container-clamp{
+			max-width:min(90%, 900px)
+		}
+	}
+}
+
+@media screen and (max-width:600px) {
+	.service-list-container{
+		.service-layout{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.service-layout.reverse{
+			gap: 0;
+		}
+		
+	}
+	.services-note{
+		display: flex;
+		flex-direction: column;
+	}
+}

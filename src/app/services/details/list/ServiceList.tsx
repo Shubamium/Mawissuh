@@ -27,13 +27,13 @@ const ServiceList = ({layout,title,paragraph,image,notes} : serviceListProp) => 
 						value={paragraph}
 					/>
 				</div>				
-				<div className="notes">
+				{notes && notes.length !== 0 && <div className="notes">
 					{notes?.map((note,index)=>{
 						return <div className='service-note' key={`service-notes-${index}`} style={{backgroundColor:note.bgColor.hex}}>
 							<p>{note.note}</p>
 						</div>
 					})}
-				</div>
+				</div>}
 			</div>
 
 			<div className="image-part">

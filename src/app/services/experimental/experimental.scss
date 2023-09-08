@@ -57,3 +57,47 @@
 		}
 	}
 }
+
+
+@media screen and (max-width:768px){
+	#container_experimental{
+		.experimental-title-panel{
+			max-width: 90%;
+			font-size: .9rem;
+		}
+		.experimental-custom-panel{
+			max-width: 80%;
+		}
+	}
+}
+
+
+@media screen and (max-width:600px){
+	#container_experimental{
+		.experimental-title-panel{
+			font-size: .8rem;
+			.decor_gear .gear_l{
+				left: -24%;
+  				top: -58%;
+				opacity: .04;
+
+			}
+			.decor_gear .gear_r{
+				right: -31%;
+  				top: 20%;
+				opacity: .05;
+			}
+		}
+		
+	}
+}
+
+@media screen and (max-width:400px) {
+	#container_experimental{
+		.experimental-title-panel{
+			font-size: .75rem;
+
+		}
+	}
+	
+}
