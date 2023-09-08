@@ -49,9 +49,15 @@ $sidebarSize:30vw;
 
 main{
 	padding-bottom: 200px;
-	margin-left: calc($sidebarSize - 1vw);
+	margin-left: $sidebarSize;
 	position: relative;
 	overflow: hidden;
+}
+
+@media screen  and (max-width:1280px){
+	main{
+		margin-left: calc($sidebarSize - 1vw);
+	}
 }
 
 

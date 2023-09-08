@@ -50,3 +50,26 @@
 		}
 	}
 }
+
+@media screen and (max-width:768px) {
+	.container_service-guideline{
+		.service-clamp{
+			display: flex;
+			flex-direction: column;
+			.img-part .decor_spell-bg{
+				display: none;
+			}
+		}
+		.text-part{
+			max-width: 80%;
+			margin: 0 auto;
+		}
+		.img-part{
+			max-height: 200px;
+		}
+
+		
+	}
+
+	
+}
