@@ -140,6 +140,33 @@
 			.btn.hidden{
 				display: none;
 			}
+			.btn{
+				justify-content: center;
+				font-size: .8rem;
+			}
+		}
+	}
+}
+@media screen and (max-width:480px) {
+	.warning-modal-panel{
+		border-radius: 1em;
+		.warning-head{
+			font-size: .6rem;
+		}
+		.warning-body{
+			
+		}
+	}
+}
+@media screen and (max-width:350px) {
+	.warning-modal-panel{
+		border-radius: .25em;
+
+		.warning-body{
+			font-size: .8rem;
+		}
+		.warning-footer{
+			font-size: .7rem;
 		}
 	}
 }
