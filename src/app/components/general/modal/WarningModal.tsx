@@ -26,9 +26,11 @@ function WarningModal({onClose}: Props) {
 						
 					</div>
 					<div className="warning-footer">
+						<div className="prompt">
 						<p>I understand and wish to proceed </p>
 						<div className="checkbox-agree" onClick={()=>{setAgree(prev => !prev)}}>
 							{agree && <IoMdCheckmark/>}
+						</div>
 						</div>
 						<Button className={`btn-close ${agree ? 'visible' : 'hidden'}`} onClick={onClose}>Continue <BsArrowRight/></Button>
 					</div>

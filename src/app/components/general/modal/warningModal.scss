@@ -73,7 +73,11 @@
 		.checkbox-agree:active{
 			scale: .9;
 		}
-
+		.prompt{
+			display: flex;
+			gap: 1em;
+			align-items: center;
+		}
 		.btn-close{
 			padding: .5em;
 			font-size: 1.4rem;
@@ -109,14 +113,33 @@
 	.warning-modal-panel{
 		margin-top: 1em;
 		transform-origin: top;
-		// max-height: 100vh;
 		scale: .9;
 	}	
 } 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:840px){
 	.warning-modal-panel{
-		width: min(100%,800px);
+		width: min(90%,800px);
+		.warning-head{
+			font-size: .9rem;
+		}
+		.warning-body{
+			font-size: 1rem;
+			text-align: center;
+		}
+		.warning-footer{
+			font-size: .95rem;
+		}
+	}
+}
 
+@media screen and (max-width:600px){
+	.warning-modal-panel{
+		.warning-footer{
+			flex-direction: column;
+			.btn.hidden{
+				display: none;
+			}
+		}
 	}
 }
